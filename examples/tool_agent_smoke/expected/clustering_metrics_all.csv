@@ -1,0 +1,5 @@
+method,level,pairwise_precision,pairwise_recall,pairwise_f1,purity,split_rate,merge_rate,clusters,items,defense,ablation,feature_ablation
+provider_lowcost,session,1.0,1.0,1.0,1.0,0.0,0.0,3.0,6.0,M0,none,none
+provider_lowcost,user,1.0,1.0,1.0,1.0,0.0,0.0,3.0,6.0,M0,none,none
+provider_lowcost,project,1.0,1.0,1.0,1.0,0.0,0.0,3.0,6.0,M0,none,none
+provider_lowcost,org,0.0,0.0,0.0,1.0,1.0,0.0,6.0,6.0,M0,none,none

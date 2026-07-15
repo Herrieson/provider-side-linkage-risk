@@ -1,0 +1,14 @@
+| view | feature_ablation | timestamp_adjacent_accuracy | timestamp_pairwise_accuracy | context_adjacent_accuracy | context_pairwise_accuracy | adjacent_pairs | ordered_pairs | evaluated_clusters |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cumulative | none | 0.736 | 0.847 | 0.736 | 0.847 | 288 | 576 | 96 |
+| cumulative | no_domains | 0.736 | 0.847 | 0.736 | 0.847 | 288 | 576 | 96 |
+| cumulative | no_traces | 0.736 | 0.847 | 0.736 | 0.847 | 288 | 576 | 96 |
+| cumulative | no_repo_ids | 0.736 | 0.847 | 0.736 | 0.847 | 288 | 576 | 96 |
+| cumulative | no_shingles | 0.000 | 0.000 | 0.000 | 0.000 | 0 | 0 | 0 |
+| cumulative | no_time_length | 0.730 | 0.842 | 0.730 | 0.842 | 222 | 444 | 74 |
+| turn_delta | none | 0.750 | 0.750 | 0.750 | 0.750 | 32 | 36 | 28 |
+| turn_delta | no_domains | 0.750 | 0.750 | 0.750 | 0.750 | 32 | 36 | 28 |
+| turn_delta | no_traces | 0.750 | 0.750 | 0.750 | 0.750 | 32 | 36 | 28 |
+| turn_delta | no_repo_ids | 0.750 | 0.750 | 0.750 | 0.750 | 32 | 36 | 28 |
+| turn_delta | no_shingles | 0.000 | 0.000 | 0.000 | 0.000 | 0 | 0 | 0 |
+| turn_delta | no_time_length | 0.750 | 0.750 | 0.750 | 0.750 | 32 | 36 | 28 |

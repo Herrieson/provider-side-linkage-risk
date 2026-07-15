@@ -1,0 +1,6 @@
+dataset,family,level,requests,request_coverage,unique_handles,recurrent_handle_rate,cross_workflow_handle_rate,cross_entity_ambiguity_rate,median_requests_per_handle
+Open-SWE,repository_namespace,project,10800,1.0,631,1.0,0.2757527733755943,0.004754358161648178,12
+Open-SWE,owner_namespace,owner,10800,1.0,515,1.0,0.3359223300970874,0.005825242718446602,12
+tau-bench,identity_handle,user,2175,0.6257471264367817,134,1.0,0.6492537313432836,0.0,16.0
+tau-bench,process_handle,user-associated process,2175,0.17839080459770115,63,0.9841269841269841,0.5873015873015873,0.015873015873015872,10
+tau-bench,shared_resource_handle,context,2175,0.5177011494252873,652,0.9739263803680982,0.8144171779141104,0.49846625766871167,12.0

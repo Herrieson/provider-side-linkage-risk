@@ -1,0 +1,140 @@
+{
+  "name": "open_swe_user_overlay_u3_mixed_1000",
+  "description": "Trace-grounded semi-synthetic user overlay on Open-SWE raw1000. U3 is the main multi-signal user-linkage setting.",
+  "seed": 7,
+  "source_dataset_dir": "artifacts/datasets/open_swe_traces_raw_1000",
+  "output_dir": "artifacts/datasets/open_swe_user_overlay_u3_mixed_1000",
+  "snapshot_output_dir": "artifacts/datasets/open_swe_user_overlay_u3_mixed_1000_snapshots",
+  "overlay_level": "U3",
+  "max_source_workflows": 1000,
+  "turn_ids": [],
+  "label_overlay": {
+    "num_orgs": 40,
+    "min_users_per_org": 3,
+    "max_users_per_org": 6,
+    "min_projects_per_org": 2,
+    "max_projects_per_org": 4,
+    "cross_user_same_project_rate": 0.45,
+    "cross_project_user_rate": 0.25,
+    "min_users_per_project": 2,
+    "preserve_source_repo_as_provenance_only": true,
+    "rewrite_visible_repo_and_workspace_aliases": true
+  },
+  "time_overlay": {
+    "start_time": "2026-01-05T09:00:00Z",
+    "time_span_days": 21,
+    "timezone_offsets": [-8, -5, 0, 1, 5, 8],
+    "active_hour_center_min": 9,
+    "active_hour_center_max": 17,
+    "active_hour_spread_hours": 4,
+    "workflow_start_jitter_minutes": 180,
+    "inter_turn_delay_seconds_min": 20,
+    "inter_turn_delay_seconds_p50": 180,
+    "inter_turn_delay_seconds_p90": 1800,
+    "burst_probability": 0.35,
+    "preserve_turn_order": true,
+    "global_sort": ["timestamp", "request_id"]
+  },
+  "signal_overlay": {
+    "user_signal_dropout_rate": 0.15,
+    "user_alias_collision_rate": 0.15,
+    "shared_environment_alias_prefix_rate": 0.20,
+    "shared_tool_schema_rate": 0.35,
+    "cache_noise_rate": 0.30,
+    "inject_environment_observation_rate": 0.70,
+    "inject_tool_preference_observation_rate": 0.50,
+    "inject_profile_hint_rate": 0.25,
+    "max_injected_messages_per_request": 1,
+    "home_alias_templates": [
+      "/home/dev-{alias}",
+      "/home/runner-{alias}",
+      "/Users/ci-{alias}"
+    ],
+    "cache_path_templates": [
+      "{home}/.cache/pip",
+      "{home}/.npm",
+      "{home}/.cargo",
+      "{home}/.m2",
+      "{home}/.pnpm-store"
+    ],
+    "temp_path_templates": [
+      "/tmp/agent-build-{alias}",
+      "/var/tmp/tool-run-{alias}"
+    ],
+    "workspace_template": "/workspace/{org_alias}__{project_alias}",
+    "tool_schema_variants": [
+      {
+        "name": "shell",
+        "parameters": ["cmd", "cwd", "timeout"]
+      },
+      {
+        "name": "bash",
+        "parameters": ["command", "workdir"]
+      },
+      {
+        "name": "terminal",
+        "parameters": ["cmd", "cwd", "env"]
+      }
+    ],
+    "command_preferences": [
+      "rg",
+      "pytest -q",
+      "npm test",
+      "pnpm test",
+      "go test ./...",
+      "mvn test",
+      "cargo test"
+    ],
+    "cache_buckets": ["low", "medium", "high"]
+  },
+  "profile_overlay": {
+    "profile_fields": [
+      "languages",
+      "frameworks",
+      "package_managers",
+      "build_tools",
+      "ci_cd_systems",
+      "service_names",
+      "internal_domains"
+    ],
+    "synthetic_internal_domain_suffixes": [
+      "svc.internal",
+      "corp.local",
+      "prod.internal"
+    ],
+    "redact_examples_by_default": true
+  },
+  "snapshots": {
+    "request_counts": [1000, 4000, 8000, 12000],
+    "include_partial_if_short": true
+  },
+  "provider_view_guardrails": {
+    "allowed_attack_view_fields": [
+      "request_id",
+      "timestamp",
+      "model",
+      "messages",
+      "tool_schemas",
+      "token_count",
+      "cache_bucket",
+      "provider_metadata"
+    ],
+    "allowed_provider_metadata_fields": [
+      "api_surface",
+      "brokered",
+      "stream"
+    ],
+    "forbidden_attack_view_fields": [
+      "org_id",
+      "user_id",
+      "project_id",
+      "workflow_id",
+      "turn_id",
+      "profile_truth",
+      "source_request_id",
+      "source_workflow_id",
+      "overlay_level",
+      "overlay_user_id"
+    ]
+  }
+}

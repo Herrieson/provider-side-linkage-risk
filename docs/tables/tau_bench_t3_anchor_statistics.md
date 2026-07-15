@@ -1,0 +1,9 @@
+| level | anchor_type | requests | request_coverage | unique_anchors | median_occurrences | max_occurrences | ambiguous_anchor_rate | cross_workflow_anchor_rate | median_lifecycle_days | max_lifecycle_days |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| user | account_cache | 7099 | 0.576 | 134 | 30.000 | 114 | 0.037 | 0.963 | 13.283 | 20.199 |
+| user | customer_ref | 7099 | 0.576 | 140 | 29.000 | 64 | 0.000 | 0.964 | 13.156 | 20.199 |
+| project | internal_domain | 7099 | 0.718 | 72 | 50.500 | 103 | 0.000 | 1.000 | 17.028 | 20.521 |
+| project | order | 7099 | 0.718 | 72 | 40.500 | 86 | 0.000 | 0.986 | 15.477 | 20.055 |
+| project | queue | 7099 | 0.718 | 72 | 50.500 | 103 | 0.000 | 1.000 | 17.028 | 20.521 |
+| org | internal_domain | 7099 | 0.800 | 72 | 50.500 | 103 | 0.000 | 1.000 | 17.028 | 20.521 |
+| org | tenant | 7099 | 0.800 | 24 | 173.000 | 198 | 0.000 | 1.000 | 19.338 | 20.624 |

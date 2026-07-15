@@ -1,0 +1,13 @@
+view,feature_ablation,hybrid_session_f1,hybrid_project_f1,hybrid_org_f1
+cumulative,none,0.974025974025974,1.0,1.0
+cumulative,no_domains,0.974025974025974,1.0,1.0
+cumulative,no_traces,0.974025974025974,1.0,1.0
+cumulative,no_repo_ids,0.974025974025974,0.0,0.10869565217391304
+cumulative,no_shingles,0.0,1.0,1.0
+cumulative,no_time_length,0.7894736842105263,1.0,1.0
+turn_delta,none,0.10650887573964496,1.0,1.0
+turn_delta,no_domains,0.10650887573964496,1.0,1.0
+turn_delta,no_traces,0.10650887573964496,1.0,1.0
+turn_delta,no_repo_ids,0.10650887573964496,0.0,0.036671368124118475
+turn_delta,no_shingles,0.0,1.0,1.0
+turn_delta,no_time_length,0.08247422680412371,1.0,1.0

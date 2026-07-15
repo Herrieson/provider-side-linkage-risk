@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "default_root": "artifacts/datasets",
+  "payloads_committed_to_git": false,
+  "bundled_example": {
+    "id": "synthetic_tool_agent_smoke",
+    "path": "examples/tool_agent_smoke/dataset",
+    "distribution": "bundled-example",
+    "requests": 6,
+    "contains_upstream_prompt_content": false,
+    "paper_evidence": false
+  },
+  "datasets": [
+    {
+      "id": "open_swe_raw_1000",
+      "local_path": "artifacts/datasets/open_swe_traces_raw_1000",
+      "source": "nvidia/Open-SWE-Traces",
+      "source_config": "openhands",
+      "source_split": "minimax_m25",
+      "requests": 12000,
+      "local_size_bytes": 1114530815,
+      "role": "main real software-agent trace evidence",
+      "distribution": "regenerate-from-upstream",
+      "contains_upstream_prompt_content": true,
+      "dataset_card": "docs/dataset-card-open-swe-traces-adapted.md",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "open_swe_turn_delta",
+      "local_path": "artifacts/datasets/open_swe_traces_raw_1000_turn_delta_3_6_9_12",
+      "source": "open_swe_raw_1000",
+      "requests": 4000,
+      "local_size_bytes": 149405017,
+      "role": "cumulative-context removal control",
+      "distribution": "regenerate-from-upstream",
+      "contains_upstream_prompt_content": true,
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "open_swe_sweagent_500",
+      "local_path": "artifacts/datasets/open_swe_traces_sweagent_minimax_raw_500",
+      "source": "nvidia/Open-SWE-Traces",
+      "source_config": "sweagent",
+      "source_split": "minimax_m25",
+      "requests": 6000,
+      "local_size_bytes": 624584930,
+      "role": "cross-scaffold transfer and strict-removal evidence",
+      "distribution": "regenerate-from-upstream",
+      "contains_upstream_prompt_content": true,
+      "dataset_card": "docs/dataset-card-open-swe-traces-adapted.md",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "open_swe_overlay_u3",
+      "local_path": "artifacts/datasets/open_swe_user_overlay_u3_mixed_1000",
+      "source": "open_swe_raw_1000 plus controlled overlay",
+      "requests": 12000,
+      "local_size_bytes": 1130197753,
+      "role": "trace-grounded user/project/organization mechanism evidence",
+      "distribution": "upstream-derived-not-bundled",
+      "contains_upstream_prompt_content": true,
+      "config": "configs/open_swe_user_overlay_u3.json",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "open_swe_overlay_u4",
+      "local_path": "artifacts/datasets/open_swe_user_overlay_u4_hard_shared_1000",
+      "source": "open_swe_raw_1000 plus controlled hard-shared overlay",
+      "requests": 12000,
+      "local_size_bytes": 1127431296,
+      "role": "anchor-sharing and user-linkage difficulty control",
+      "distribution": "upstream-derived-not-bundled",
+      "contains_upstream_prompt_content": true,
+      "config": "configs/open_swe_user_overlay_u4_hard_shared.json",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "tau_bench_historical",
+      "local_path": "artifacts/datasets/tau_bench_historical_adapted",
+      "source": "sierra-research/tau-bench historical trajectories",
+      "requests": 7099,
+      "local_size_bytes": 75395599,
+      "role": "natural non-code tool-agent evidence",
+      "distribution": "regenerate-from-upstream",
+      "contains_upstream_prompt_content": true,
+      "dataset_card": "docs/dataset-card-tau-bench-adapted.md",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "tau_bench_historical_sample200",
+      "local_path": "artifacts/datasets/tau_bench_historical_sample200",
+      "source": "tau_bench_historical reservoir sample, seed 7",
+      "requests": 2175,
+      "local_size_bytes": 23221993,
+      "role": "held-out non-code linkage evaluation",
+      "distribution": "regenerate-from-upstream",
+      "contains_upstream_prompt_content": true,
+      "dataset_card": "docs/dataset-card-tau-bench-adapted.md",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "tau_bench_overlay_t3",
+      "local_path": "artifacts/datasets/tau_bench_overlay_t3",
+      "snapshot_path": "artifacts/datasets/tau_bench_overlay_t3_snapshots",
+      "source": "tau_bench_historical plus controlled business-entity overlay",
+      "requests": 7099,
+      "local_size_bytes": 81186508,
+      "snapshot_size_bytes": 177830121,
+      "role": "three-level percolation, robustness, and later-traffic watchlist",
+      "distribution": "upstream-derived-not-bundled",
+      "contains_upstream_prompt_content": true,
+      "config": "configs/tau_bench_overlay_t3.json",
+      "dataset_card": "docs/dataset-card-tau-bench-adapted.md",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "swe_bench_lite_natural",
+      "local_path": "artifacts/datasets/swe_bench_lite_natural_balanced_sample",
+      "source": "princeton-nlp/SWE-bench_Lite",
+      "requests": 228,
+      "local_size_bytes": 2536628,
+      "role": "independent repaired workflow boundary evidence",
+      "distribution": "regenerate-from-upstream",
+      "contains_upstream_prompt_content": true,
+      "dataset_card": "docs/dataset-card-swe-bench-lite-adapted.md",
+      "reproduction": "docs/reproduction.md"
+    },
+    {
+      "id": "synthetic_a",
+      "local_path": "artifacts/datasets/synthetic_mvp",
+      "source": "local deterministic generator",
+      "requests": 18400,
+      "local_size_bytes": 33299005,
+      "role": "controlled scale, difficulty, hierarchy, and profile evidence",
+      "distribution": "regenerate",
+      "contains_upstream_prompt_content": false,
+      "config": "configs/mvp.json",
+      "dataset_card": "docs/dataset-card-synthetic-a.md",
+      "release_bundle": "agent-privacy-synthetic-a.zip"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "name": "tau_bench_overlay_t3",
+  "description": "Trace-grounded semi-synthetic three-layer business overlay on tau-bench historical trajectories.",
+  "seed": 17,
+  "source_dataset_dir": "artifacts/datasets/tau_bench_historical_adapted",
+  "output_dir": "artifacts/datasets/tau_bench_overlay_t3",
+  "snapshot_output_dir": "artifacts/datasets/tau_bench_overlay_t3_snapshots",
+  "overlay_level": "T3",
+  "max_source_workflows": 660,
+  "label_overlay": {
+    "num_orgs": 24,
+    "domains": ["airline", "retail"],
+    "min_users_per_org": 4,
+    "max_users_per_org": 7,
+    "min_projects_per_org": 2,
+    "max_projects_per_org": 4,
+    "user_alias_collision_rate": 0.12
+  },
+  "time_overlay": {
+    "start_time": "2026-02-01T09:00:00Z",
+    "time_span_days": 21,
+    "active_hour_spread_hours": 4,
+    "workflow_start_jitter_minutes": 240,
+    "inter_turn_delay_seconds_min": 20,
+    "inter_turn_delay_seconds_max": 900
+  },
+  "signal_overlay": {
+    "signal_dropout_rate": 0.12,
+    "cache_noise_rate": 0.25,
+    "user_cache_bucket_rate": 0.40,
+    "inject_account_context_rate": 0.65,
+    "inject_case_context_rate": 0.60,
+    "inject_overlay_tool_schema_rate": 0.55
+  },
+  "snapshots": {
+    "request_counts": [1000, 2500, 5000, 7099],
+    "include_partial_if_short": true
+  },
+  "provider_view_guardrails": {
+    "allowed_attack_view_fields": [
+      "request_id",
+      "timestamp",
+      "model",
+      "messages",
+      "tool_schemas",
+      "token_count",
+      "cache_bucket",
+      "provider_metadata"
+    ],
+    "allowed_provider_metadata_fields": [
+      "api_surface",
+      "brokered",
+      "stream"
+    ],
+    "forbidden_attack_view_fields": [
+      "org_id",
+      "user_id",
+      "project_id",
+      "workflow_id",
+      "turn_id",
+      "profile_truth",
+      "source_request_id",
+      "source_workflow_id",
+      "overlay_level",
+      "overlay_user_id"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+condition,early_workflows,later_workflows,early_users,later_seen_user_workflows,assigned_later_workflows,matched_eligible_workflows,correct_assignments,ambiguous_later_workflows,watchlist_anchors,early_components,pure_component_rate,precision,recall,f1,f1_ci_low,f1_ci_high,semantic_threshold
+all_identity_anchors,100,100,53,64,64,64,64,0,123,57,1.0,1.0,1.0,1.0,1.0,1.0,
+uid_only,100,100,53,64,64,64,64,0,50,57,1.0,1.0,1.0,1.0,1.0,1.0,
+cross_alias_no_later_uid,100,100,53,64,62,62,62,0,123,57,1.0,1.0,0.96875,0.9841269841269841,0.9586322333811572,1.0,
+cross_alias_namezip_only,100,100,53,64,29,29,29,0,123,57,1.0,1.0,0.453125,0.6236559139784946,0.505373048004627,0.7290741822429907,
+strict_later_semantic_intent,100,100,53,64,25,25,23,0,123,57,1.0,0.92,0.359375,0.5168539325842697,0.3785994397759104,0.6428571428571428,0.92
+strict_semantic_base_task_disjoint,101,99,44,25,35,14,8,0,114,45,1.0,0.22857142857142856,0.32,0.26666666666666666,0.1310752688172043,0.41509433962264153,0.8

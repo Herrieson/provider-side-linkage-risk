@@ -1,0 +1,2 @@
+method,level,unit_level,iterations,observed_precision,observed_recall,observed_f1,precision_mean,precision_ci_low,precision_ci_high,recall_mean,recall_ci_low,recall_ci_high,f1_mean,f1_ci_low,f1_ci_high,units,requests
+context_only,session,session,500,0.7894736842105263,1.0,0.8823529411764706,0.806747864769097,0.6302521008403361,0.9493670886075949,1.0,1.0,1.0,0.8904390823339755,0.7731958762886598,0.974025974025974,100,400

@@ -1,0 +1,48 @@
+[project]
+name = "agent-privacy-linkage"
+version = "0.1.0"
+description = "Provider-side linkage-risk measurement for brokered LLM agent API traffic"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "numpy>=2.0.0",
+    "scikit-learn>=1.7.0",
+]
+
+[project.optional-dependencies]
+data = ["datasets>=5.0.0"]
+paper = ["matplotlib>=3.11.0"]
+semantic = [
+    "hnswlib>=0.8.0",
+    "sentence-transformers>=5.6.0",
+]
+all = [
+    "datasets>=5.0.0",
+    "hnswlib>=0.8.0",
+    "matplotlib>=3.11.0",
+    "sentence-transformers>=5.6.0",
+]
+
+[project.scripts]
+agent-privacy-run = "agent_privacy.experiments.run_dataset:main"
+agent-privacy-smoke = "agent_privacy.experiments.run_mvp:main"
+agent-privacy-figures = "agent_privacy.experiments.generate_paper_figures:main"
+
+[dependency-groups]
+dev = [
+    "hnswlib>=0.8.0",
+    "pytest>=8.4.0",
+    "ruff>=0.11.0",
+]
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]

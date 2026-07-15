@@ -1,0 +1,14 @@
+| source_scaffold | target_scaffold | method | source_calibration_sessions | target_sessions | target_projects | alpha_dense | sparse_floor | threshold | mutual_margin | source_threshold_quantile | applied_target_threshold | source_calibration_f1 | precision | recall | f1 | f1_ci_low | f1_ci_high | purity | split_rate | merge_rate | candidates | source_tfidf_vocabulary |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OpenHands | SWE-agent | strict_direct_anchor |  | 500 | 374 |  |  |  |  |  |  |  | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 1.000 | 0.195 | 0.000 | 0 | 40000 |
+| OpenHands | SWE-agent | dense_only | 236 | 500 | 374 | 1.000 | 0.000 | 0.860 |  | 1.000 | 0.860 | 0.030 | 0.455 | 0.019 | 0.037 | 0.000 | 0.091 | 0.992 | 0.193 | 0.004 | 9611 | 40000 |
+| OpenHands | SWE-agent | structured_tfidf_only | 236 | 500 | 374 | 0.000 | 0.000 | 0.420 |  | 0.984 | 0.420 | 0.643 | 0.109 | 0.386 | 0.170 | 0.075 | 0.325 | 0.914 | 0.110 | 0.012 | 8826 | 40000 |
+| OpenHands | SWE-agent | carp_content_project | 236 | 500 | 374 | 0.500 | 0.200 | 0.420 |  | 0.525 | 0.420 | 0.884 | 0.015 | 0.811 | 0.029 | 0.019 | 0.041 | 0.546 | 0.037 | 0.041 | 3412 | 40000 |
+| OpenHands | SWE-agent | carp_content_quantile_transfer | 236 | 500 | 374 | 0.500 | 0.200 | 0.420 |  | 0.525 | 0.406 | 0.884 | 0.014 | 0.892 | 0.028 | 0.018 | 0.040 | 0.484 | 0.032 | 0.058 | 3412 | 40000 |
+| OpenHands | SWE-agent | carp_content_mutual_transfer | 236 | 500 | 374 | 0.250 | 0.400 |  | 0.020 |  |  | 0.440 | 0.909 | 0.193 | 0.318 | 0.247 | 0.439 | 0.990 | 0.123 | 0.011 | 55 | 40000 |
+| SWE-agent | OpenHands | strict_direct_anchor |  | 1000 | 639 |  |  |  |  |  |  |  | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 1.000 | 0.288 | 0.000 | 0 | 26231 |
+| SWE-agent | OpenHands | dense_only | 120 | 1000 | 639 | 1.000 | 0.000 | 0.840 |  | 1.000 | 0.840 | 0.061 | 0.889 | 0.044 | 0.084 | 0.015 | 0.183 | 0.996 | 0.283 | 0.003 | 18662 | 26231 |
+| SWE-agent | OpenHands | structured_tfidf_only | 120 | 1000 | 639 | 0.000 | 0.000 | 0.540 |  | 0.991 | 0.540 | 0.694 | 0.028 | 0.551 | 0.053 | 0.036 | 0.077 | 0.810 | 0.167 | 0.013 | 19149 | 26231 |
+| SWE-agent | OpenHands | carp_content_project | 120 | 1000 | 639 | 0.500 | 0.300 | 0.600 |  | 0.894 | 0.600 | 0.792 | 0.130 | 0.431 | 0.200 | 0.123 | 0.329 | 0.925 | 0.203 | 0.013 | 16256 | 26231 |
+| SWE-agent | OpenHands | carp_content_quantile_transfer | 120 | 1000 | 639 | 0.500 | 0.300 | 0.600 |  | 0.894 | 0.522 | 0.792 | 0.008 | 0.836 | 0.015 | 0.010 | 0.020 | 0.527 | 0.092 | 0.045 | 16256 | 26231 |
+| SWE-agent | OpenHands | carp_content_mutual_transfer | 120 | 1000 | 639 | 0.250 | 0.300 |  | 0.050 |  |  | 0.842 | 0.978 | 0.098 | 0.179 | 0.119 | 0.252 | 0.998 | 0.208 | 0.002 | 91 | 26231 |

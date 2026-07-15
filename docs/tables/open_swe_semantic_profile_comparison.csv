@@ -1,0 +1,4 @@
+field,precision,recall,f1,tp,fp,fn,predicted_values,evidenced_values,unsupported_predictions,evidence_coverage,profiler,cluster_source,split,model,threshold,min_request_support,calibration_orgs,test_orgs,test_requests,embedding_seconds,semantic_spans,max_rss_mb
+__audited_micro__,0.8234361233480176,0.7913632514817951,0.8070811744386875,4673.0,1002.0,1232.0,5675,5675,0,1.0,structured_predicted_clusters,predicted,test,none,,,124,432,3028,,,
+__audited_micro__,0.8228561366437753,0.7913632514817951,0.8068024861878453,4673.0,1006.0,1232.0,5679,5679,0,1.0,semantic_predicted_clusters,predicted,test,sentence-transformers/all-MiniLM-L6-v2,0.58,3,124,432,3028,106.6558274099998,31950,2271.71484375
+__audited_micro__,0.8238287418845411,0.7950889077053345,0.8092037228541883,4695.0,1004.0,1210.0,5699,5699,0,1.0,semantic_truth_clusters,truth,test,sentence-transformers/all-MiniLM-L6-v2,0.58,3,124,432,3028,106.6558274099998,31950,2271.71484375

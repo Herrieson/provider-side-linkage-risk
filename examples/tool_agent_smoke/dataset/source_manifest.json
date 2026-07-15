@@ -1,0 +1,33 @@
+{
+  "config": {
+    "hf_config": null,
+    "hf_dataset": "sierra-research/tau-bench",
+    "hf_split": "train",
+    "input_path": "examples/tool_agent_smoke/source",
+    "inter_turn_seconds": 45,
+    "limit": 10,
+    "max_turns_per_workflow": null,
+    "output_dir": "examples/tool_agent_smoke/dataset",
+    "seed": 7,
+    "timestamp_start": "2026-02-01T09:00:00Z",
+    "use_hf": false,
+    "workflow_spacing_minutes": 5
+  },
+  "dataset": "tau-bench adapted",
+  "dataset_type": "heterogeneous_non_code_tool_agent",
+  "domains": [
+    "airline",
+    "retail"
+  ],
+  "notes": [
+    "Converts non-code tool-agent trajectories into the common provider-view schema.",
+    "Each attack_view row represents the cumulative messages visible before an assistant/agent turn.",
+    "Ground-truth task/session/domain/entity labels are stored only in ground_truth/provenance.",
+    "Use a real tau-bench trajectory export or Hugging Face rows before reporting paper results."
+  ],
+  "provenance": 6,
+  "requests": 6,
+  "source_rows_seen": 3,
+  "truth": 6,
+  "workflows_used": 3
+}

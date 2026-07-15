@@ -1,0 +1,12 @@
+| source | risk_level | description | fields | covered_fields | precision | recall | f1 | tp | fp | fn | predicted_values | evidence_coverage |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| predicted_hybrid_org | L1_technical | General technical stack | build_tools,frameworks,languages,package_managers | build_tools,frameworks,languages,package_managers | 0.849 | 0.621 | 0.717 | 3127 | 555 | 1911 | 3682 | 1.000 |
+| predicted_hybrid_org | L2_project | Project/repository identifiers | repo_names | repo_names | 0.837 | 0.516 | 0.638 | 656 | 128 | 615 | 784 | 1.000 |
+| predicted_hybrid_org | L3_org_clues | Organization-like or business clues | industries,service_names | industries,service_names | 0.003 | 0.002 | 0.002 | 2 | 653 | 1269 | 655 | 1.000 |
+| predicted_hybrid_org | L4_security_environment | Security/deployment environment clues | auth_systems,ci_cd_systems,cloud_providers,databases,internal_domains,security_clues | auth_systems,ci_cd_systems,cloud_providers,databases,internal_domains,security_clues | 0.078 | 0.494 | 0.135 | 42 | 496 | 43 | 538 | 1.000 |
+| predicted_hybrid_org | L5_high_risk_secrets | Secrets and credentials; excluded from Open-SWE profile claims | api_keys,connection_strings,customer_data,tokens |  | 0.000 | 0.000 | 0.000 | 0 | 0 | 0 | 0 | 0.000 |
+| truth_cluster_upper_bound | L1_technical | General technical stack | build_tools,frameworks,languages,package_managers | build_tools,frameworks,languages,package_managers | 0.850 | 0.624 | 0.720 | 3146 | 557 | 1892 | 3703 | 1.000 |
+| truth_cluster_upper_bound | L2_project | Project/repository identifiers | repo_names | repo_names | 0.840 | 0.520 | 0.642 | 661 | 126 | 610 | 787 | 1.000 |
+| truth_cluster_upper_bound | L3_org_clues | Organization-like or business clues | industries,service_names | industries,service_names | 0.003 | 0.002 | 0.002 | 2 | 656 | 1269 | 658 | 1.000 |
+| truth_cluster_upper_bound | L4_security_environment | Security/deployment environment clues | auth_systems,ci_cd_systems,cloud_providers,databases,internal_domains,security_clues | auth_systems,ci_cd_systems,cloud_providers,databases,internal_domains,security_clues | 0.080 | 0.506 | 0.138 | 43 | 495 | 42 | 538 | 1.000 |
+| truth_cluster_upper_bound | L5_high_risk_secrets | Secrets and credentials; excluded from Open-SWE profile claims | api_keys,connection_strings,customer_data,tokens |  | 0.000 | 0.000 | 0.000 | 0 | 0 | 0 | 0 | 0.000 |

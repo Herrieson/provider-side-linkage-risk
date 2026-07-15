@@ -1,0 +1,10 @@
+| snapshot | source_requests | source_workflows | feature_ablation | evaluated_requests | session_f1 | session_purity | project_f1 | org_f1 | reconstructed_workflows | workflow_purity | workflow_pairwise_order_accuracy | pure_ordered_clusters | ordered_pairs |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| full_turns_first_1000 | 1000 | 86 | no_semantic | 333 | 0.804 | 0.892 | 1.000 | 1.000 | 76 | 0.957 | 0.851 | 70 | 401 |
+| full_turns_first_1000 | 1000 | 86 | no_shingles | 333 | 0.000 | 1.000 | 1.000 | 1.000 | 333 | 1.000 | 0.000 | 0 | 0 |
+| full_turns_first_4000 | 4000 | 334 | no_semantic | 1334 | 0.965 | 0.976 | 1.000 | 1.000 | 326 | 0.989 | 0.841 | 319 | 1909 |
+| full_turns_first_4000 | 4000 | 334 | no_shingles | 1334 | 0.000 | 1.000 | 1.000 | 1.000 | 1334 | 1.000 | 0.000 | 0 | 0 |
+| full_turns_first_8000 | 8000 | 671 | no_semantic | 2665 | 0.971 | 0.980 | 0.996 | 0.987 | 655 | 0.991 | 0.838 | 643 | 3846 |
+| full_turns_first_8000 | 8000 | 671 | no_shingles | 2665 | 0.000 | 1.000 | 0.996 | 0.987 | 2665 | 1.000 | 0.000 | 0 | 0 |
+| full_turns_first_12000 | 12000 | 1000 | no_semantic | 4000 | 0.970 | 0.979 | 0.996 | 0.987 | 979 | 0.990 | 0.836 | 960 | 5760 |
+| full_turns_first_12000 | 12000 | 1000 | no_shingles | 4000 | 0.000 | 1.000 | 0.996 | 0.987 | 4000 | 1.000 | 0.000 | 0 | 0 |

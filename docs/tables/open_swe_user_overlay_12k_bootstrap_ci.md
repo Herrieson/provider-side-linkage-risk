@@ -1,0 +1,10 @@
+| overlay_level | method | level | observed_f1 | f1_ci_low | f1_ci_high | units | requests |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| U3 | provider_lowcost | session | 0.691 | 0.669 | 0.710 | 1000 | 12000 |
+| U3 | provider_lowcost | user | 0.281 | 0.256 | 0.300 | 1000 | 12000 |
+| U3 | provider_lowcost | project | 0.639 | 0.624 | 0.655 | 1000 | 12000 |
+| U3 | provider_lowcost | org | 0.604 | 0.589 | 0.619 | 1000 | 12000 |
+| U4 | provider_lowcost | session | 0.602 | 0.584 | 0.623 | 1000 | 12000 |
+| U4 | provider_lowcost | user | 0.029 | 0.025 | 0.034 | 1000 | 12000 |
+| U4 | provider_lowcost | project | 0.566 | 0.557 | 0.577 | 1000 | 12000 |
+| U4 | provider_lowcost | org | 0.541 | 0.532 | 0.552 | 1000 | 12000 |

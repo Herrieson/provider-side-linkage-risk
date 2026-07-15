@@ -1,0 +1,4 @@
+scenario,requests,truth,orgs,users,projects,noise,seed,num_orgs,users_per_org,projects_per_org,workflows_per_user,turns_per_workflow,noise_rate,shared_template_rate,shared_repo_name_rate,shared_service_name_rate,shared_stack_rate,cross_user_same_project_rate,context_carryover_rate,time_mixing_window_minutes,start_time
+small,792,792,8,24,16,72,7,8,3,2,6,5,0.1,0.75,0.3,0.3,0.6,0.45,0.85,60,2026-01-05T09:00:00Z
+medium,2150,2150,12,48,36,230,7,12,4,3,8,5,0.12,0.75,0.3,0.3,0.6,0.45,0.85,60,2026-01-05T09:00:00Z
+hard_shared,2304,2304,12,48,36,384,7,12,4,3,8,5,0.2,0.95,0.75,0.75,0.9,0.75,0.65,180,2026-01-05T09:00:00Z

@@ -1,0 +1,232 @@
+[
+  {
+    "cluster_id": "hybrid_o_000230",
+    "evidence": [
+      {
+        "field": "frameworks",
+        "request_id": "[REQ]",
+        "snippet": "> @elastic/synthetics@0.0.1-alpha.14 test > npm run test:unit && npm run test:browser-service --testPathPattern=__tests__/dsl/journey.test.ts > @elastic/synthetics@0.0.1-alpha.14 test:unit > jest Determining test suites to run... Running without BrowserService",
+        "value": "jest"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "Here's the files and directories up to 2 levels deep in [PATH], excluding hidden items: [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PAT",
+        "value": "pip"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "src/helpers.ts:659:54 - error TS2698: Spread types may only be created from object types. 659 : serializer.serialize({ doc: chunk, ...secondArg }) ~~~~~~~~~~~~ Found 1 error in src/helpers.ts:659 npm notice npm notice New major version of npm available! 8.19.4",
+        "value": "npm"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "? github.com/elastic/go-sysinfo/internal/registry [no test files] ? github.com/elastic/go-sysinfo/providers/aix [no test files] ? github.com/elastic/go-sysinfo/providers/shared [no test files] ? github.com/elastic/go-sysinfo/providers/windows [no test files] ?",
+        "value": "maven"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "Here's the result of running `cat -n` on [PATH]: 1 /** 2 * MIT License 3 * 4 * Copyright (c) 2020-present, Elastic NV 5 * 6 * Permission is hereby granted, free of charge, to any person obtaining a copy 7 * of this software and associated documentation files (",
+        "value": "yarn"
+      },
+      {
+        "field": "build_tools",
+        "request_id": "[REQ]",
+        "snippet": "Here's the files and directories up to 2 levels deep in [PATH], excluding hidden items: [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PAT",
+        "value": "make"
+      }
+    ],
+    "example_id": "profile_example_1",
+    "fields": {
+      "build_tools": [
+        "go test",
+        "make",
+        "maven"
+      ],
+      "ci_cd_systems": [
+        "circleci"
+      ],
+      "frameworks": [
+        "jest"
+      ],
+      "internal_domains": [
+        "[DOMAIN]",
+        "[DOMAIN]",
+        "[DOMAIN]"
+      ],
+      "languages": [
+        "go",
+        "java",
+        "javascript",
+        "python",
+        "typescript"
+      ],
+      "package_managers": [
+        "maven",
+        "npm",
+        "pip",
+        "yarn"
+      ],
+      "repo_names": [
+        "[REPO_NAMES]",
+        "[REPO_NAMES]",
+        "[REPO_NAMES]",
+        "[REPO_NAMES]",
+        "[REPO_NAMES]"
+      ],
+      "service_names": [
+        "[SERVICE_NAMES]"
+      ]
+    },
+    "majority_owner_like_org": "[ORG]",
+    "request_count": 48
+  },
+  {
+    "cluster_id": "hybrid_o_000152",
+    "evidence": [
+      {
+        "field": "frameworks",
+        "request_id": "[REQ]",
+        "snippet": "Here's the result of running `cat -n` on [PATH]: 1 from enum import Enum 2 from random import randint 3 4 import pytest 5 6 from pythonfmu.enums import Fmi2Causality, Fmi2Initial, Fmi2Variability 7 from pythonfmu.variables import Boolean, Integer, Real, Scalar",
+        "value": "pytest"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "Here's the files and directories up to 2 levels deep in [PATH], excluding hidden items: [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PAT",
+        "value": "pip"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "Here's the files and directories up to 2 levels deep in [PATH], excluding hidden items: [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PAT",
+        "value": "npm"
+      },
+      {
+        "field": "build_tools",
+        "request_id": "[REQ]",
+        "snippet": "Here's the result of running `cat -n` on [PATH]: 1 from enum import Enum 2 from random import randint 3 4 import pytest 5 6 from pythonfmu.enums import Fmi2Causality, Fmi2Initial, Fmi2Variability 7 from pythonfmu.variables import Boolean, Integer, Real, Scalar",
+        "value": "pytest"
+      },
+      {
+        "field": "build_tools",
+        "request_id": "[REQ]",
+        "snippet": "Let me test some edge cases and additional scenarios to make sure everything works correctly:",
+        "value": "make"
+      },
+      {
+        "field": "languages",
+        "request_id": "[REQ]",
+        "snippet": "Here's the result of running `cat -n` on [PATH]: 1 import math 2 import tempfile 3 from pathlib import Path 4 5 import pytest 6 7 from pythonfmu.builder import FmuBuilder 8 9 pyfmi = pytest.importorskip( 10 \"pyfmi\", reason=\"pyfmi is required for testing the pr",
+        "value": "python"
+      }
+    ],
+    "example_id": "profile_example_2",
+    "fields": {
+      "build_tools": [
+        "make",
+        "pytest"
+      ],
+      "frameworks": [
+        "pytest"
+      ],
+      "internal_domains": [
+        "[DOMAIN]",
+        "[DOMAIN]",
+        "[DOMAIN]",
+        "[DOMAIN]",
+        "[DOMAIN]"
+      ],
+      "languages": [
+        "go",
+        "python"
+      ],
+      "package_managers": [
+        "npm",
+        "pip"
+      ],
+      "repo_names": [
+        "[REPO_NAMES]"
+      ]
+    },
+    "majority_owner_like_org": "[ORG]",
+    "request_count": 4
+  },
+  {
+    "cluster_id": "hybrid_o_000082",
+    "evidence": [
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "Here's the files and directories up to 2 levels deep in [PATH], excluding hidden items: [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PAT",
+        "value": "pip"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "Here's the files and directories up to 2 levels deep in [PATH], excluding hidden items: [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PAT",
+        "value": "npm"
+      },
+      {
+        "field": "package_managers",
+        "request_id": "[REQ]",
+        "snippet": "total 84 drwxr-xr-x 14 root root 460 Apr 23 20:21 . drwxr-xr-x 3 root root 80 Apr 23 20:21 .. drwxr-xr-x 9 root root 320 Apr 23 20:21 .git drwxr-xr-x 4 root root 140 Apr 23 20:21 .github -rw-r--r-- 1 root root 16 Apr 23 20:21 .gitignore -rw-r--r-- 1 root root ",
+        "value": "cargo"
+      },
+      {
+        "field": "build_tools",
+        "request_id": "[REQ]",
+        "snippet": "Here's the result of running `cat -n` on [PATH]: 2355 return result 2356 2357 # TODO: Make canonicalize_shape return named shapes? 2358 def as_named_shape(shape) -> NamedShape: 2359 if isinstance(shape, NamedShape): 2360 return shape 2361 return NamedShape(*sh",
+        "value": "make"
+      },
+      {
+        "field": "build_tools",
+        "request_id": "[REQ]",
+        "snippet": "Here's the files and directories up to 2 levels deep in [PATH], excluding hidden items: [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PATH] [PAT",
+        "value": "bazel"
+      },
+      {
+        "field": "build_tools",
+        "request_id": "[REQ]",
+        "snippet": "total 84 drwxr-xr-x 14 root root 460 Apr 23 20:21 . drwxr-xr-x 3 root root 80 Apr 23 20:21 .. drwxr-xr-x 9 root root 320 Apr 23 20:21 .git drwxr-xr-x 4 root root 140 Apr 23 20:21 .github -rw-r--r-- 1 root root 16 Apr 23 20:21 .gitignore -rw-r--r-- 1 root root ",
+        "value": "cargo"
+      }
+    ],
+    "example_id": "profile_example_3",
+    "fields": {
+      "build_tools": [
+        "bazel",
+        "cargo",
+        "go test",
+        "make"
+      ],
+      "internal_domains": [
+        "[DOMAIN]"
+      ],
+      "languages": [
+        "go",
+        "java",
+        "javascript",
+        "python",
+        "rust"
+      ],
+      "package_managers": [
+        "cargo",
+        "npm",
+        "pip"
+      ],
+      "repo_names": [
+        "[REPO_NAMES]",
+        "[REPO_NAMES]",
+        "[REPO_NAMES]",
+        "[REPO_NAMES]",
+        "[REPO_NAMES]"
+      ]
+    },
+    "majority_owner_like_org": "[ORG]",
+    "request_count": 84
+  }
+]

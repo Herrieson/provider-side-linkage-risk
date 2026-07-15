@@ -1,0 +1,16 @@
+| label | source_requests | evaluated_requests | feature_seconds | attack_seconds | evaluation_seconds | cache_scan_seconds | max_rss_mb | feature_window_chars | feature_max_shingles | stream_provider_lowcost | max_cache_bucket_requests | candidate_edges | candidate_pair_link_events | session_f1 | user_f1 | project_f1 | org_f1 | workflow_pairwise_order_accuracy |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| provider_lowcost_sample100 | 1200 | 400 | 7.656 | 7.655 | 1.804 | not_recorded | not_recorded |  |  |  |  | not_recorded |  | 0.882 | 0.000 | 1.000 | 1.000 | 0.859 |
+| provider_lowcost_full_turns_first_1000 | 1000 | 333 | not_recorded | not_recorded | not_recorded | not_recorded | not_recorded |  |  |  |  | not_recorded |  | 0.804 | 0.000 | 1.000 | 1.000 | 0.851 |
+| provider_lowcost_full_turns_first_4000 | 4000 | 1334 | not_recorded | not_recorded | not_recorded | not_recorded | not_recorded |  |  |  |  | not_recorded |  | 0.965 | 0.000 | 1.000 | 1.000 | 0.841 |
+| provider_lowcost_full_turns_first_8000 | 8000 | 2665 | not_recorded | not_recorded | not_recorded | not_recorded | not_recorded |  |  |  |  | not_recorded |  | 0.971 | 0.000 | 0.996 | 0.987 | 0.838 |
+| provider_lowcost_full_turns_first_12000 | 12000 | 4000 | not_recorded | not_recorded | not_recorded | not_recorded | not_recorded |  |  |  |  | not_recorded |  | 0.970 | 0.000 | 0.996 | 0.987 | 0.836 |
+| overlay_u3_provider_lowcost_12k_materialized_budgeted | 12000 | 12000 | 147.382 | 86.891 | 1.222 | not_recorded | 3333.051 | 24000 | 1200 |  |  | not_recorded |  | 0.691 | 0.281 | 0.639 | 0.604 | 0.000 |
+| overlay_u3_provider_lowcost_1k_streamed_budgeted | 1000 | 1000 | 0.000 | 16.441 | 0.012 | not_recorded | 164.770 | 24000 | 1200 | True | 394 | not_recorded |  | 0.240 | 0.265 | 0.762 | 0.685 | 0.000 |
+| overlay_u3_provider_lowcost_4k_streamed_budgeted | 4000 | 4000 | 0.000 | 67.902 | 0.052 | not_recorded | 538.734 | 24000 | 1200 | True | 1397 | not_recorded |  | 0.475 | 0.296 | 0.682 | 0.623 | 0.000 |
+| overlay_u3_provider_lowcost_8k_streamed_budgeted | 8000 | 8000 | 0.000 | 148.084 | 0.129 | not_recorded | 922.938 | 24000 | 1200 | True | 2727 | not_recorded |  | 0.653 | 0.267 | 0.656 | 0.611 | 0.000 |
+| overlay_u3_provider_lowcost_12k_streamed_budgeted | 12000 | 12000 | 195.175 | 77.458 | 0.266 | 17.660 | 1301.168 | 24000 | 1200 | True | 4057 | 361997 | 392634 | 0.691 | 0.281 | 0.639 | 0.604 | 0.000 |
+| overlay_u4_provider_lowcost_1k_streamed_budgeted | 1000 | 1000 | 0.000 | 17.008 | 0.013 | not_recorded | 150.781 | 24000 | 1200 | True | 339 | not_recorded |  | 0.184 | 0.036 | 0.609 | 0.558 | 0.000 |
+| overlay_u4_provider_lowcost_4k_streamed_budgeted | 4000 | 4000 | 0.000 | 63.452 | 0.058 | not_recorded | 565.418 | 24000 | 1200 | True | 1487 | not_recorded |  | 0.442 | 0.029 | 0.573 | 0.549 | 0.000 |
+| overlay_u4_provider_lowcost_8k_streamed_budgeted | 8000 | 8000 | 0.000 | 134.396 | 0.114 | not_recorded | 974.590 | 24000 | 1200 | True | 2924 | not_recorded |  | 0.563 | 0.028 | 0.570 | 0.544 | 0.000 |
+| overlay_u4_provider_lowcost_12k_streamed_budgeted | 12000 | 12000 | 153.410 | 69.836 | 0.228 | 9.764 | 1373.973 | 24000 | 1200 | True | 4335 | 366211 | 362943 | 0.602 | 0.029 | 0.566 | 0.541 | 0.000 |

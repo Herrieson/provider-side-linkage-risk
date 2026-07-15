@@ -1,0 +1,13 @@
+| run | defense | hybrid_session_f1 | hybrid_project_f1 | hybrid_org_f1 | token_retention | message_retention | tool_char_retention | workspace_paths_removed | domains_removed |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_defense_probe | M0 | 0.974 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0 | 0 |
+| baseline_defense_probe | M1 | 0.974 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0 | 0 |
+| baseline_defense_probe | M2 | 0.165 | 0.000 | 0.000 | 1.000 | 1.000 | 0.858 | 83138 | 248 |
+| baseline_defense_probe | M3 | 0.974 | 1.000 | 1.000 | 0.131 | 1.000 | 0.060 | 72514 | 227 |
+| baseline_defense_probe | M4 | 0.962 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0 | 0 |
+| baseline_defense_probe | M6 | 0.030 | 0.000 | 0.000 | 0.131 | 1.000 | 0.043 | 83138 | 248 |
+| selective_workspace_probe | M0 | 0.974 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0 | 0 |
+| selective_workspace_probe | M2 | 0.165 | 0.000 | 0.000 | 1.000 | 1.000 | 0.858 | 83138 | 248 |
+| selective_workspace_probe | M7_WORKSPACE_STABLE | 0.974 | 0.000 | 0.000 | 1.000 | 1.000 | 0.970 | 0 | 0 |
+| selective_workspace_probe | M8_WORKSPACE_SESSION | 0.593 | 0.000 | 0.000 | 1.000 | 1.000 | 0.995 | 0 | 0 |
+| selective_workspace_probe | M9_PATH_TYPE_ONLY | 0.529 | 0.000 | 0.000 | 1.000 | 1.000 | 0.888 | 83138 | 0 |

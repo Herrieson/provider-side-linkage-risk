@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "payloads_committed_to_git": false,
+  "canonical_summary_root": "docs/tables",
+  "release_bundle": "agent-privacy-paper-results.zip",
+  "bundle_policy": {
+    "include": [
+      "*.csv",
+      "*.md",
+      "predictions.json",
+      "run_summary.json",
+      "*_summary.json"
+    ],
+    "exclude": [
+      "attack_view.jsonl",
+      "ground_truth.jsonl",
+      "request_provenance.jsonl",
+      "reconstructed_workflows.jsonl",
+      "*_profiles.json",
+      "*_predicted_clusters.json",
+      "*_truth_clusters.json",
+      "_archive/**"
+    ]
+  },
+  "curated_runs": [
+    {
+      "id": "open_swe_cumulative_sample100",
+      "local_path": "results/open_swe_provider_lowcost_cumulative_sample100_cluster",
+      "local_size_bytes": 491368,
+      "purpose": "cumulative-context CARP linkage",
+      "bundle": true,
+      "tables": [
+        "docs/tables/open_swe_main_session_evidence.md",
+        "docs/tables/open_swe_provider_lowcost.md"
+      ]
+    },
+    {
+      "id": "open_swe_turn_delta_sample100",
+      "local_path": "results/open_swe_provider_lowcost_turn_delta_sample100_cluster",
+      "local_size_bytes": 664906,
+      "purpose": "turn-delta continuity control",
+      "bundle": true,
+      "tables": [
+        "docs/tables/open_swe_main_session_evidence.md",
+        "docs/tables/open_swe_strict_signal_removal.md"
+      ]
+    },
+    {
+      "id": "open_swe_controls_sample100",
+      "local_path": "results/open_swe_controls_sample100_turns_3_6_9_12",
+      "local_size_bytes": 615476,
+      "purpose": "random, oracle-size, and feature controls",
+      "bundle": true,
+      "tables": [
+        "docs/tables/open_swe_controls_sample100.md",
+        "docs/tables/open_swe_controls_sample100_bootstrap_ci.md"
+      ]
+    },
+    {
+      "id": "open_swe_longitudinal_12000",
+      "local_path": "results/open_swe_provider_lowcost_longitudinal_full_first_12000_turns",
+      "local_size_bytes": 3512022,
+      "purpose": "full held-out Open-SWE fixed-turn clustering",
+      "bundle": true,
+      "tables": [
+        "docs/tables/open_swe_provider_lowcost_longitudinal_full_turns.md",
+        "docs/tables/open_swe_cross_workflow_entity_validity.md"
+      ]
+    },
+    {
+      "id": "open_swe_semantic_profile",
+      "local_path": "results/open_swe_semantic_profile",
+      "local_size_bytes": 6684649,
+      "purpose": "org-disjoint semantic profile calibration and aggregate comparison",
+      "bundle": true,
+      "tables": [
+        "docs/tables/open_swe_semantic_profile_comparison.md"
+      ]
+    },
+    {
+      "id": "tau_bench_historical_sample200",
+      "local_path": "results/tau_bench_historical_sample200_provider_lowcost",
+      "local_size_bytes": 4823146,
+      "purpose": "natural non-code linkage and signal ablations",
+      "bundle": true,
+      "tables": [
+        "docs/tables/tau_bench_historical_evidence.md",
+        "docs/tables/tau_bench_historical_operating_points.md"
+      ]
+    },
+    {
+      "id": "tau_bench_t3_bucket_local",
+      "local_path": "results/tau_bench_overlay_t3_first_2500_provider_lowcost",
+      "local_size_bytes": 6348450,
+      "purpose": "T3 bucket-local baseline and ablations",
+      "bundle": true,
+      "tables": [
+        "docs/tables/tau_bench_overlay_t3_first_2500_provider_lowcost.md",
+        "docs/tables/tau_bench_t3_entity_percolation.md"
+      ]
+    },
+    {
+      "id": "tau_bench_t3_stable_handles",
+      "local_path": "results/tau_bench_overlay_t3_first_2500_provider_lowcost_stable_handles",
+      "local_size_bytes": 552155,
+      "purpose": "cross-cache stable-handle percolation and watchlist source clusters",
+      "bundle": true,
+      "tables": [
+        "docs/tables/tau_bench_t3_entity_percolation.md",
+        "docs/tables/tau_bench_t3_entity_watchlist.md"
+      ]
+    },
+    {
+      "id": "synthetic_matrix",
+      "local_path": "results/synthetic_matrix",
+      "local_size_bytes": 14212785,
+      "purpose": "controlled scale, difficulty, and profile matrix",
+      "bundle": true,
+      "tables": [
+        "docs/tables/synthetic_matrix_summary.md",
+        "docs/tables/synthetic_matrix_clustering.csv",
+        "docs/tables/synthetic_matrix_profile.csv"
+      ]
+    }
+  ]
+}

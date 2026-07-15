@@ -1,0 +1,7 @@
+level,test_requests,eligible_seen_entity_requests,matched_requests,correct_matches,ambiguous_matches,precision,recall,f1,assignment_coverage,eligible_target_coverage,watch_anchors,watch_clusters,mean_train_cluster_purity,dataset,train_snapshot,test_window,method
+user,2500,1939,1119,1075,0,0.9606791778373548,0.55440948942754,0.7030739045127534,0.4476,0.9775280898876404,211,105,0.998826899180725,tau_bench_overlay_t3,first_2500_requests,after_2500_to_5000,provider_lowcost
+user,4599,3530,2069,1965,0,0.9497341710971484,0.556657223796034,0.7019110555456333,0.44988040878451835,0.9805825242718447,211,105,0.998826899180725,tau_bench_overlay_t3,first_2500_requests,after_2500_to_full,provider_lowcost
+project,2500,2311,1666,1666,0,1.0,0.7209000432713111,0.8378174503394518,0.6664,1.0,192,66,0.9999021478545917,tau_bench_overlay_t3,first_2500_requests,after_2500_to_5000,provider_lowcost
+project,4599,4236,3002,3002,0,1.0,0.7086874409820585,0.8295109146172975,0.6527505979560774,1.0,192,66,0.9999021478545917,tau_bench_overlay_t3,first_2500_requests,after_2500_to_full,provider_lowcost
+org,2500,2500,1938,1938,13,1.0,0.7752,0.8733663812528166,0.7752,1.0,90,25,1.0,tau_bench_overlay_t3,first_2500_requests,after_2500_to_5000,provider_lowcost
+org,4599,4599,3584,3584,22,1.0,0.7792998477929984,0.8759623609923011,0.7792998477929984,1.0,90,25,1.0,tau_bench_overlay_t3,first_2500_requests,after_2500_to_full,provider_lowcost

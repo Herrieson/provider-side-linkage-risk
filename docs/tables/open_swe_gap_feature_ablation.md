@@ -1,0 +1,14 @@
+| view | feature_ablation | hybrid_session_f1 | hybrid_project_f1 | hybrid_org_f1 |
+| --- | --- | --- | --- | --- |
+| cumulative | none | 0.974 | 1.000 | 1.000 |
+| cumulative | no_domains | 0.974 | 1.000 | 1.000 |
+| cumulative | no_traces | 0.974 | 1.000 | 1.000 |
+| cumulative | no_repo_ids | 0.974 | 0.000 | 0.109 |
+| cumulative | no_shingles | 0.000 | 1.000 | 1.000 |
+| cumulative | no_time_length | 0.789 | 1.000 | 1.000 |
+| turn_delta | none | 0.107 | 1.000 | 1.000 |
+| turn_delta | no_domains | 0.107 | 1.000 | 1.000 |
+| turn_delta | no_traces | 0.107 | 1.000 | 1.000 |
+| turn_delta | no_repo_ids | 0.107 | 0.000 | 0.037 |
+| turn_delta | no_shingles | 0.000 | 1.000 | 1.000 |
+| turn_delta | no_time_length | 0.082 | 1.000 | 1.000 |

@@ -1,0 +1,14 @@
+| sample_label | sample_scope | evaluated_requests | view | hybrid_session_f1 | hybrid_project_f1 | hybrid_org_f1 | rare_project_f1 | feature_seconds | attack_seconds |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 100_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 400 | cumulative_raw | 0.740 | 0.000 | 0.000 | 0.000 | 4.025 | 0.911 |
+| 100_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 400 | cumulative_no_workspace | 0.740 | 0.000 | 0.000 | 0.000 | 4.309 | 0.963 |
+| 100_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 400 | turn_delta_raw | 0.013 | 0.000 | 0.000 | 0.000 | 1.626 | 0.443 |
+| 100_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 400 | turn_delta_no_workspace | 0.013 | 0.000 | 0.000 | 0.000 | 1.780 | 0.471 |
+| 250_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 1000 | cumulative_raw | 0.750 | 0.000 | 0.000 | 0.000 | 9.674 | 1.957 |
+| 250_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 1000 | cumulative_no_workspace | 0.750 | 0.000 | 0.000 | 0.000 | 10.464 | 2.011 |
+| 250_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 1000 | turn_delta_raw | 0.039 | 0.000 | 0.000 | 0.000 | 4.063 | 0.898 |
+| 250_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 1000 | turn_delta_no_workspace | 0.039 | 0.000 | 0.000 | 0.000 | 4.252 | 0.906 |
+| 500_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 2000 | cumulative_raw | 0.711 | 0.000 | 0.000 | 0.000 | 20.800 | 4.277 |
+| 500_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 2000 | cumulative_no_workspace | 0.711 | 0.000 | 0.000 | 0.000 | 23.051 | 4.265 |
+| 500_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 2000 | turn_delta_raw | 0.028 | 0.000 | 0.000 | 0.000 | 8.855 | 1.515 |
+| 500_local_reservoir_seed7 | local_from_sweagent_minimax_raw_500 | 2000 | turn_delta_no_workspace | 0.028 | 0.000 | 0.000 | 0.000 | 9.504 | 1.543 |

@@ -1,0 +1,8 @@
+| scope | method | precision | recall | f1 | f1_ci_low | f1_ci_high | semantic_threshold | combined_threshold | semantic_candidates | typed_candidates | strong_typed_candidates | combined_candidates | embedding_seconds_all_requests | workflows | requests |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| calibration | semantic_only | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.980 | 0.980 | 7149 | 2896 | 291 | 8860 | 6.300 | 40 | 439 |
+| calibration | stable_process_handle_only | 1.000 | 0.128 | 0.227 | 0.117 | 0.354 | 0.980 | 0.980 | 7149 | 2896 | 291 | 8860 | 6.300 | 40 | 439 |
+| calibration | carp_content | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.980 | 0.980 | 7149 | 2896 | 291 | 8860 | 6.300 | 40 | 439 |
+| held_out | semantic_only | 0.922 | 1.000 | 0.960 | 0.896 | 1.000 | 0.980 | 0.980 | 26973 | 9698 | 1325 | 32613 | 6.300 | 160 | 1736 |
+| held_out | stable_process_handle_only | 0.552 | 0.089 | 0.153 | 0.111 | 0.197 | 0.980 | 0.980 | 26973 | 9698 | 1325 | 32613 | 6.300 | 160 | 1736 |
+| held_out | carp_content | 0.922 | 1.000 | 0.960 | 0.896 | 1.000 | 0.980 | 0.980 | 26973 | 9698 | 1325 | 32613 | 6.300 | 160 | 1736 |

@@ -1,0 +1,17 @@
+scaffold,split,sample_size,view,result_dir,hybrid_session_f1,hybrid_project_f1,hybrid_org_f1,rare_project_f1,temporal_session_f1,tool_session_f1
+openhands,minimax_m25,1000,cumulative_raw,results/open_swe_traces_raw_1000_turns_3_6_9_12_m0_fast,0.985,0.996,0.987,0.996,0.092,0.001
+openhands,minimax_m25,1000,cumulative_no_workspace,results/open_swe_traces_raw_1000_turns_3_6_9_12_no_workspace_fast,0.529,0.0,0.0,0.0,0.092,0.001
+openhands,minimax_m25,1000,turn_delta_raw,results/open_swe_traces_raw_1000_turn_delta_3_6_9_12_m0_fast,0.116,0.996,0.987,0.996,0.092,0.001
+openhands,minimax_m25,1000,turn_delta_no_workspace,results/open_swe_traces_raw_1000_turn_delta_3_6_9_12_no_workspace_fast,0.023,0.0,0.0,0.0,0.092,0.001
+openhands,qwen35_122b,500,cumulative_raw,results/open_swe_traces_openhands_qwen35_raw_500_turns_3_6_9_12_m0_fast,0.974,1.0,1.0,1.0,0.092,0.003
+openhands,qwen35_122b,500,cumulative_no_workspace,results/open_swe_traces_openhands_qwen35_raw_500_turns_3_6_9_12_no_workspace_fast,0.548,0.0,0.0,0.0,0.092,0.003
+openhands,qwen35_122b,500,turn_delta_raw,results/open_swe_traces_openhands_qwen35_raw_500_turn_delta_3_6_9_12_m0_fast,0.038,0.996,0.997,0.996,0.092,0.002
+openhands,qwen35_122b,500,turn_delta_no_workspace,results/open_swe_traces_openhands_qwen35_raw_500_turn_delta_3_6_9_12_no_workspace_fast,0.009,0.0,0.0,0.0,0.092,0.002
+sweagent,minimax_m25,500,cumulative_raw,results/open_swe_traces_sweagent_minimax_raw_500_turns_3_6_9_12_m0_fast,0.711,0.0,0.0,0.0,0.092,0.003
+sweagent,minimax_m25,500,cumulative_no_workspace,results/open_swe_traces_sweagent_minimax_raw_500_turns_3_6_9_12_no_workspace_fast,0.711,0.0,0.0,0.0,0.092,0.003
+sweagent,minimax_m25,500,turn_delta_raw,results/open_swe_traces_sweagent_minimax_raw_500_turn_delta_3_6_9_12_m0_fast,0.028,0.0,0.0,0.0,0.092,0.002
+sweagent,minimax_m25,500,turn_delta_no_workspace,results/open_swe_traces_sweagent_minimax_raw_500_turn_delta_3_6_9_12_no_workspace_fast,0.028,0.0,0.0,0.0,0.092,0.002
+sweagent,qwen35_122b,500,cumulative_raw,results/open_swe_traces_sweagent_qwen35_raw_500_turns_3_6_9_12_m0_fast,0.7,0.0,0.0,0.0,0.092,0.003
+sweagent,qwen35_122b,500,cumulative_no_workspace,results/open_swe_traces_sweagent_qwen35_raw_500_turns_3_6_9_12_no_workspace_fast,0.697,0.0,0.0,0.0,0.092,0.003
+sweagent,qwen35_122b,500,turn_delta_raw,results/open_swe_traces_sweagent_qwen35_raw_500_turn_delta_3_6_9_12_m0_fast,0.003,0.0,0.0,0.0,0.092,0.002
+sweagent,qwen35_122b,500,turn_delta_no_workspace,results/open_swe_traces_sweagent_qwen35_raw_500_turn_delta_3_6_9_12_no_workspace_fast,0.003,0.0,0.0,0.0,0.092,0.002

@@ -1,0 +1,16 @@
+| overlay_level | snapshot | feature_ablation | hybrid_user_f1 | hybrid_session_f1 | hybrid_project_f1 | hybrid_org_f1 |
+| --- | --- | --- | --- | --- | --- | --- |
+| U3 | first_1000_requests | none | 0.363 | 0.825 | 1.000 | 1.000 |
+| U3 | first_1000_requests | no_paths | 0.000 | 0.510 | 0.000 | 0.000 |
+| U3 | first_1000_requests | no_usernames | 0.000 | 0.825 | 1.000 | 1.000 |
+| U3 | first_1000_requests | no_tool_schema | 0.363 | 0.825 | 1.000 | 1.000 |
+| U3 | first_1000_requests | no_time_length | 0.363 | 0.423 | 1.000 | 1.000 |
+| U3 | first_1000_requests | no_cache | 0.363 | 0.825 | 1.000 | 1.000 |
+| U3 | first_1000_requests | no_shingles | 0.363 | 0.000 | 1.000 | 1.000 |
+| U4 | first_1000_requests | none | 0.067 | 0.880 | 1.000 | 1.000 |
+| U4 | first_1000_requests | no_paths | 0.000 | 0.498 | 0.000 | 0.000 |
+| U4 | first_1000_requests | no_usernames | 0.000 | 0.890 | 1.000 | 1.000 |
+| U4 | first_1000_requests | no_tool_schema | 0.067 | 0.880 | 1.000 | 1.000 |
+| U4 | first_1000_requests | no_time_length | 0.067 | 0.590 | 1.000 | 1.000 |
+| U4 | first_1000_requests | no_cache | 0.067 | 0.880 | 1.000 | 1.000 |
+| U4 | first_1000_requests | no_shingles | 0.067 | 0.000 | 1.000 | 1.000 |

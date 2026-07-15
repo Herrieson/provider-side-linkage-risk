@@ -1,0 +1,16 @@
+{
+  "seed": 7,
+  "num_orgs": 20,
+  "users_per_org": 5,
+  "projects_per_org": 3,
+  "workflows_per_user": 20,
+  "turns_per_workflow": 8,
+  "noise_rate": 0.15,
+  "shared_template_rate": 0.75,
+  "shared_repo_name_rate": 0.3,
+  "shared_service_name_rate": 0.3,
+  "shared_stack_rate": 0.6,
+  "cross_user_same_project_rate": 0.45,
+  "context_carryover_rate": 0.85,
+  "time_mixing_window_minutes": 60
+}

@@ -1,0 +1,46 @@
+.venv/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Local paper datasets and experiment outputs are too large for Git. Keep only
+# their release documentation and catalogs in the repository.
+artifacts/*
+!artifacts/README.md
+!artifacts/dataset-manifest.json
+results/*
+!results/README.md
+!results/result-manifest.json
+
+# Local credentials and editor/OS state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/
+
+docs/paper/*.aux
+docs/paper/*.bbl
+docs/paper/*.blg
+docs/paper/*.log
+docs/paper/*.out
+docs/paper/*.pdf
+
+# Overleaf build products. The source, bibliography, template files, and
+# referenced figures under docs/overleaf/ are versioned for direct upload.
+docs/overleaf/*.aux
+docs/overleaf/*.bbl
+docs/overleaf/*.blg
+docs/overleaf/*.log
+docs/overleaf/*.out
+docs/overleaf/*.pdf
+docs/overleaf/*.zip

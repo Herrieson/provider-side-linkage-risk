@@ -1,0 +1,11 @@
+| method | level | observed_f1 | f1_mean | f1_ci_low | f1_ci_high | units | requests |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| provider_lowcost | session | 0.882 | 0.894 | 0.789 | 0.974 | 100 | 400 |
+| provider_lowcost | project | 1.000 | 1.000 | 1.000 | 1.000 | 100 | 400 |
+| provider_lowcost | org | 1.000 | 1.000 | 1.000 | 1.000 | 100 | 400 |
+| random | session | 0.016 | 0.016 | 0.011 | 0.021 | 100 | 400 |
+| random | project | 0.013 | 0.014 | 0.009 | 0.019 | 100 | 400 |
+| random | org | 0.014 | 0.014 | 0.010 | 0.019 | 100 | 400 |
+| oracle_size_random | session | 0.012 | 0.012 | 0.005 | 0.020 | 100 | 400 |
+| oracle_size_random | project | 0.008 | 0.008 | 0.002 | 0.015 | 100 | 400 |
+| oracle_size_random | org | 0.007 | 0.007 | 0.002 | 0.013 | 100 | 400 |

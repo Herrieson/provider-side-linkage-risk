@@ -1,0 +1,11 @@
+| method | level | feature_ablation | precision | recall | f1 | f1_ci_low | f1_ci_high | purity | clusters | items |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| provider_lowcost | session | none | 0.789 | 1.000 | 0.882 | 0.789 | 0.974 | 0.910 | 91 | 400 |
+| provider_lowcost | project | none | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 96 | 400 |
+| provider_lowcost | org | none | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 94 | 400 |
+| random | session | none | 0.009 | 0.060 | 0.016 | 0.011 | 0.021 | 0.100 | 20 | 400 |
+| random | project | none | 0.008 | 0.045 | 0.013 | 0.009 | 0.019 | 0.092 | 20 | 400 |
+| random | org | none | 0.008 | 0.046 | 0.014 | 0.010 | 0.019 | 0.090 | 20 | 400 |
+| oracle_size_random | session | none | 0.012 | 0.012 | 0.012 | 0.005 | 0.020 | 0.268 | 100 | 400 |
+| oracle_size_random | project | none | 0.008 | 0.008 | 0.008 | 0.002 | 0.015 | 0.253 | 96 | 400 |
+| oracle_size_random | org | none | 0.007 | 0.007 | 0.007 | 0.002 | 0.013 | 0.247 | 94 | 400 |

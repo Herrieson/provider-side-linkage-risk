@@ -1,0 +1,5 @@
+scaffold,split,sample_size,dataset_dir,requests,workflows,source_rows_seen,sample_mode,repair_mode,turn_delta_requests,audit_path,turn_delta_audit_path
+openhands,minimax_m25,1000,artifacts/datasets/open_swe_traces_raw_1000,12000,1000,1000,first,none,4000,docs/open-swe-traces-raw-1000-audit.md,docs/open-swe-traces-raw-1000-turn-delta-3-6-9-12-audit.md
+openhands,qwen35_122b,500,artifacts/datasets/open_swe_traces_openhands_qwen35_raw_500,6000,500,500,first,none,2000,docs/open-swe-traces-openhands-qwen35-raw-500-audit.md,docs/open-swe-traces-openhands-qwen35-raw-500-turn-delta-3-6-9-12-audit.md
+sweagent,minimax_m25,500,artifacts/datasets/open_swe_traces_sweagent_minimax_raw_500,6000,500,500,first,none,2000,docs/open-swe-traces-sweagent-minimax-raw-500-audit.md,docs/open-swe-traces-sweagent-minimax-raw-500-turn-delta-3-6-9-12-audit.md
+sweagent,qwen35_122b,500,artifacts/datasets/open_swe_traces_sweagent_qwen35_raw_500,6000,500,500,first,none,2000,docs/open-swe-traces-sweagent-qwen35-raw-500-audit.md,docs/open-swe-traces-sweagent-qwen35-raw-500-turn-delta-3-6-9-12-audit.md
