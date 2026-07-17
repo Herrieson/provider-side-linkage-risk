@@ -17,15 +17,21 @@ identifiers, while the paper measures residual linkage in the more protective br
    context replay as cross-domain root mechanisms.
 2. A three-surface measurement protocol with strict attack-view/truth separation, paired controls,
    cross-domain handle parsing, shared-resource ambiguity rejection, and natural non-code evidence.
-3. CARP as a bounded threat-evaluation instantiation, with candidate recall, standard HNSW/sketch
-   diagnostics, and a time-independent semantic second stage rather than a new graph-learning claim.
-4. Concurrency/rephrasing, zero-label cross-scaffold, threshold, 100K scale, and anchor-stability
-   stress tests; natural and controlled watchlists, partial profiling, runtime, and uncertainty.
+3. CARP for bounded sparse discovery and ASL for selective Agent-state linkage using replay,
+   tool/resource continuity, typed handles, conflict evidence, and abstention.
+4. Concurrency/rephrasing, zero-label cross-scaffold, threshold, 500K scale, anchor-stability, and
+   observation-equivalence tests; natural and controlled watchlists, partial profiling, cost, and
+   uncertainty.
 
 ## Main-Paper Artifacts
 
-- Figure 1: `docs/paper/figures/carp_pipeline.pdf`
-- Figure 2: `docs/paper/figures/t3_longitudinal.pdf`
+- Figure 1: measurement contract and CARP/ASL paths,
+  `docs/overleaf/figures/carp_pipeline.pdf`
+- Figure 2: four-panel channels, concurrency, Agent-state gain, and indistinguishability summary,
+  `docs/overleaf/figures/results_overview.pdf`
+- Figure 3: hierarchical propagation and later-traffic watchlist,
+  `docs/overleaf/figures/t3_longitudinal.pdf`
+- Supplementary evidence-layer figure: `docs/overleaf/figures/evidence_layers.pdf`
 - Open-SWE session baselines, bootstrap CIs, and ordering:
   `docs/tables/open_swe_main_session_evidence.md`
 - Open-SWE direct exposure, strict removal, and candidate diagnostics:
@@ -60,6 +66,8 @@ identifiers, while the paper measures residual linkage in the more protective br
 - Profile comparison: `docs/tables/open_swe_structured_profile_comparison.md`;
   `docs/tables/open_swe_semantic_profile_comparison.md`
 - Cost model: `docs/tables/open_swe_provider_lowcost_cost_model.md`
+- Observation-equivalence bound: `docs/tables/observation_indistinguishability.md`
+- Pair imbalance and asymmetric error-cost audit: `docs/tables/open_swe_pairwise_cost_audit.md`
 
 ## Appendix-Only Material
 
@@ -92,10 +100,10 @@ privacy problem.
 
 1. Threat model and provider-view boundary.
 2. Direct exposure versus workflow-continuity distinction.
-3. CARP attack instantiation, candidate recall, and sparse-cost argument.
-4. Historical non-code evidence and controlled T3 stability boundaries.
+3. CARP sparse discovery and ASL Agent-state linkage, including the generic-text comparison.
+4. Historical non-code evidence and controlled hierarchy-overlay stability.
 5. Profile and semantic negative result.
 6. Ethics, scope, and limitations.
 
-When space is tight, remove detailed baselines and secondary datasets before shortening the threat
-model or claim-boundary text.
+When space is tight, move detailed baselines and secondary numeric results to the supplement before
+shortening the threat model, Agent-native method, or main causal findings.

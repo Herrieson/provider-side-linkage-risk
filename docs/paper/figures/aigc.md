@@ -8,9 +8,10 @@ Inkscape、Keynote 或绘图代码手工重建为矢量图。
 
 | 编号 | 文件 | 用途 | 版式 |
 | --- | --- | --- | --- |
-| Figure 1 | `carp_pipeline.pdf` | 正文：Measurement Framework + CARP 参考攻击 | 双栏，约 2.64:1 |
-| Figure 2 | `t3_longitudinal.pdf` | 正文：T3 纵向传播和 watchlist 结果 | 单栏，约 1.64:1 |
-| Supplementary Figure | `evidence_layers.pdf` | 补充材料：数据证据层级与论文角色 | 双栏，约 2.33:1 |
+| Figure 1 | `carp_pipeline.pdf` | 正文：Measurement Contract + CARP/ASL 双路径 | 双栏，约 2.2:1 |
+| Figure 2 | `results_overview.pdf` | 正文：通道、并发、Agent-state 增益与不可区分性 | 双栏，四联图 |
+| Figure 3 | `t3_longitudinal.pdf` | 正文：层次化纵向传播和 watchlist 结果 | 单栏，约 1.54:1 |
+| Supplementary Figure | `evidence_layers.pdf` | 补充材料：数据证据层级与研究问题 | 双栏，约 2.33:1 |
 
 ## 统一视觉规范
 
@@ -69,13 +70,13 @@ distorted axes, invented numbers, raster blur.
 1. 文生图模型主要负责构图、图标语言和视觉节奏，不负责生成准确文字。
 2. 最好要求模型留出文字区域，只保留阶段编号 `1--5`；所有英文标签后期手工覆盖。
 3. Figure 2 是定量实验图，生成图只能作为风格参考，不能从生成图读取柱高或数值。
-4. 不改变论文当前因果叙事：CARP 是受预算约束的参考攻击，不是新的学习算法。
+4. 不改变论文当前因果叙事：CARP 负责稀疏发现，ASL 负责 Agent-state 选择性关联。
 5. 不把 broker 画成攻击者。攻击者是 honest-but-curious model provider；broker 只做可选的
    protocol-level identifier stripping。
 
 ---
 
-## Figure 1: Controlled Measurement Framework and Reference Attack
+## Figure 1: Controlled Measurement Framework and Agent-Native Linkage
 
 ### 论文角色
 
@@ -106,7 +107,7 @@ distorted axes, invented numbers, raster blur.
 2. `Broker transform`：终止客户端连接、使用 broker 自身 upstream credential，并剥离 caller IDs。
 3. `Attack view`：只包含明文 content 与论文允许的 telemetry。
 4. `Paired controls`：对路径、上下文、时间、别名和冲突条件进行 remove / perturb。
-5. `Reference attacks + diagnostics`：CARP、direct parser、prefix、temporal、ANN 等参考攻击和控制。
+5. `Linkage methods`：CARP 稀疏发现与 ASL Agent-state 选择性关联。
 6. `Score + attribute risk`：输出指标，并判断风险来自 direct exposure、continuity 还是 propagation。
 
 Broker transform 后必须产生一个下方分支 `Hidden truth / labels only`。该框使用红色虚线边框，
@@ -138,16 +139,13 @@ Attack view / content + allowed telemetry
 Hidden truth / labels only
 attack cannot read
 Paired controls / remove or perturb
-Reference attacks + diagnostics
+Linkage methods
 Score + attribute risk
 unsealed only for scoring
 
-CARP reference attack: bounded sparse linkage before higher-cost reconstruction
-1  Cache-local blocking
-2  Typed-anchor indexes
-3  Context candidates
-4  Budgeted refinement
-5  Cross-cache propagation
+Two complementary bounded linkage paths
+CARP: block + index | context candidates | budgeted refinement | typed-handle propagation
+ASL: bounded Agent state | multi-view candidates | support--conflict gate | selective hierarchy
 Outputs: workflow partitions | task-entity components | profiles | later-traffic watchlists
 ```
 
@@ -245,7 +243,7 @@ Organization:  0.30  0.78  0.88
 ### 必须手工覆盖的准确文字
 
 ```text
-T3: Persistent Handles Enable Later Tracking
+Persistent Handles Enable Longitudinal Linkage
 
 Bucket-local cold start
 Cross-cache stable-handle linkage
@@ -312,8 +310,8 @@ for precise manual reconstruction.
 - 深色 header 带贯穿顶部，四个列名均匀对齐；
 - 每一数据集占一条完整横向色带，列之间只用白色细分隔线；
 - 第一列数据集名称可配一个很小的线性图标，但不牺牲文字空间；
-- Open-SWE 使用浅蓝，tau-bench historical 使用浅青，Dataset B / T3 使用浅金，
-  Synthetic A 使用浅红；
+- Open-SWE 使用浅蓝，tau-bench historical 使用浅青，hierarchy overlay 使用浅金，
+  controlled replay 使用浅红；
 - 从上到下视觉上由 natural trace evidence 过渡到 controlled mechanism evidence，但不要
   使用“高到低质量”的箭头，以免把可控实验错误表达为低质量数据；
 - 底部放一条不带边框的 claim-scope 注释，使用次要灰色文字。
@@ -322,8 +320,8 @@ for precise manual reconstruction.
 
 - Open-SWE：终端窗口与 repository branch；
 - tau-bench historical：工具调用括号与 order / reservation ticket；
-- Dataset B / T3：真实 trace 纸片上叠加一层小型彩色 handle；
-- Synthetic A：规则生成的四层节点树或参数旋钮。
+- Hierarchy overlay：真实 trace 纸片上叠加一层小型彩色 handle；
+- Controlled replay：重标识的公开轨迹与时间轴。
 
 ### 精确矩阵内容
 
@@ -331,8 +329,8 @@ for precise manual reconstruction.
 | --- | --- | --- | --- |
 | Open-SWE | Real software-agent traces | workflow, repo, owner-like | Main real-data evidence |
 | tau-bench historical | Real tool-agent traces | workflow/session | Non-code external validity |
-| Dataset B / T3 | Real traces + controlled overlay | user / tenant / project | Trace-grounded mechanism |
-| Synthetic A | Controlled generated traffic | full hierarchy + profile | Scale and difficulty controls |
+| Hierarchy overlay | Real traces + controlled overlay | user / tenant / project | Longitudinal mechanism |
+| Controlled replay | Re-keyed public traces | known workflow structure | Computation scale |
 
 底部准确说明：
 
@@ -371,8 +369,8 @@ leave clean zones for manual labels.
 
 - Open-SWE 的 owner-like truth 不是企业组织身份。
 - tau-bench historical 的可靠 truth 主要是 workflow/session；不要擅自填充真实 user/org truth。
-- Dataset B / T3 必须明确保留 `controlled overlay`，不能画成纯真实企业日志。
-- Synthetic A 的作用是 scale 和 difficulty control，不是主真实数据证据。
+- Hierarchy overlay 必须明确保留 `controlled overlay`，不能画成纯真实企业日志。
+- Controlled replay 的作用是 computation scale，不是流量代表性证据。
 - 四行不是简单的质量排名，而是互补的证据层。
 - 该图不应声称论文发布了一个新的 benchmark。
 

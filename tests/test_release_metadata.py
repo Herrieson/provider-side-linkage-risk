@@ -28,6 +28,22 @@ def test_release_catalog_references_exist() -> None:
             assert (ROOT / value).exists(), (label, value)
 
 
+def test_review_artifacts_are_cataloged() -> None:
+    artifacts = json.loads(
+        (ROOT / "docs/artifact-manifest.json").read_text(encoding="utf-8")
+    )
+
+    assert artifacts["curated_tables"]["open_swe_pairwise_cost_audit"] == (
+        "docs/tables/open_swe_pairwise_cost_audit.md"
+    )
+    assert artifacts["submission_package"]["results_overview_figure"] == (
+        "docs/overleaf/figures/results_overview.pdf"
+    )
+    assert artifacts["submission_package"]["supplementary_evidence_layers_figure"] == (
+        "docs/overleaf/figures/evidence_layers.pdf"
+    )
+
+
 def test_result_bundle_policy_excludes_content_payloads() -> None:
     manifest = json.loads((ROOT / "results/result-manifest.json").read_text(encoding="utf-8"))
     include = tuple(manifest["bundle_policy"]["include"])

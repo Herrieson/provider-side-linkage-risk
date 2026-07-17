@@ -1,0 +1,60 @@
+[
+  {
+    "comparisons": 7987,
+    "comparisons_per_request": 19.9675,
+    "dataset": "open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100",
+    "hash_dimensions": 32768,
+    "max_active_requests": 2048,
+    "method": "generic_hashed_text_nearest_neighbor",
+    "metrics": {
+      "abstention_rate": 0.8475,
+      "accepted_edges": 61.0,
+      "clusters": 339.0,
+      "contaminated_requests": 0.0,
+      "contaminated_requests_per_bridge": 0.0,
+      "false_pairs_per_bridge": 0.0,
+      "false_positive_pairs": 0.0,
+      "items": 400.0,
+      "largest_mixed_component": 0.0,
+      "merge_rate": 0.0,
+      "minimum_false_bridge_edges": 0.0,
+      "mixed_components": 0.0,
+      "pairwise_f1": 0.20359281437125748,
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.11333333333333333,
+      "purity": 1.0,
+      "split_rate": 0.99
+    },
+    "peak_active_requests": 35,
+    "requests": 400
+  },
+  {
+    "comparisons": 134146,
+    "comparisons_per_request": 61.67632183908046,
+    "dataset": "tau_bench_historical_sample200",
+    "hash_dimensions": 32768,
+    "max_active_requests": 2048,
+    "method": "generic_hashed_text_nearest_neighbor",
+    "metrics": {
+      "abstention_rate": 0.9549425287356322,
+      "accepted_edges": 98.0,
+      "clusters": 2077.0,
+      "contaminated_requests": 11.0,
+      "contaminated_requests_per_bridge": 2.75,
+      "false_pairs_per_bridge": 1.75,
+      "false_positive_pairs": 7.0,
+      "items": 2175.0,
+      "largest_mixed_component": 3.0,
+      "merge_rate": 0.0019258545979778526,
+      "minimum_false_bridge_edges": 4.0,
+      "mixed_components": 4.0,
+      "pairwise_f1": 0.018883049790683174,
+      "pairwise_precision": 0.9380530973451328,
+      "pairwise_recall": 0.009537520244736369,
+      "purity": 0.9981609195402299,
+      "split_rate": 1.0
+    },
+    "peak_active_requests": 132,
+    "requests": 2175
+  }
+]

@@ -108,6 +108,7 @@ paper interface; inspect raw result directories only when auditing or regenerati
 | Main 2x2 bootstrap confidence intervals | `docs/tables/open_swe_2x2_bootstrap_ci.md` |
 | Provider-lowcost two-stage chain | `docs/tables/open_swe_provider_lowcost.md` |
 | Main session baselines, bootstrap CIs, and ordering | `docs/tables/open_swe_main_session_evidence.md` |
+| Pair imbalance and asymmetric error-cost audit | `docs/tables/open_swe_pairwise_cost_audit.md` |
 | Direct exposure, strict removal, and semantic project linkage | `docs/tables/open_swe_direct_exposure_audit.md`; `docs/tables/open_swe_strict_signal_removal.md`; `docs/tables/open_swe_strict_semantic_project_linkage.md`; `docs/tables/open_swe_sweagent_strict_semantic_project_linkage.md` |
 | Zero-target-label cross-scaffold transfer | `docs/tables/open_swe_cross_scaffold_zero_tuning.md` |
 | Cross-workflow entity validity and repository/owner-anchor control | `docs/tables/open_swe_cross_workflow_entity_validity.md` |
@@ -117,6 +118,7 @@ paper interface; inspect raw result directories only when auditing or regenerati
 | Structured profile reconstruction comparison | `docs/tables/open_swe_structured_profile_comparison.md` |
 | Calibrated MiniLM semantic profile comparison | `docs/tables/open_swe_semantic_profile_comparison.md`; `docs/tables/open_swe_semantic_profile_novel_evidence.md` |
 | Runtime, 100K scale, and held-out threshold robustness | `docs/tables/open_swe_runtime_cost.md`; `docs/tables/carp_synthetic_scale.md`; `docs/tables/open_swe_heldout_threshold_robustness.md` |
+| Observation-equivalence linkage bound | `docs/tables/observation_indistinguishability.md` |
 | Dataset B user overlay linkage and CIs | `docs/tables/open_swe_user_overlay_linkage_summary.md`; `docs/tables/open_swe_user_overlay_12k_bootstrap_ci.md` |
 | Dataset B longitudinal/profile results | `docs/tables/open_swe_user_overlay_longitudinal.md`; `docs/tables/open_swe_user_overlay_profile_reconstruction.md` |
 | tau-bench T3 entity percolation and watchlist | `docs/tables/tau_bench_t3_entity_percolation.md`; `docs/tables/tau_bench_t3_entity_watchlist.md` |
@@ -128,9 +130,10 @@ paper interface; inspect raw result directories only when auditing or regenerati
 | Extension bootstrap confidence intervals | `docs/tables/paper_extension_bootstrap_ci.md` |
 | Synthetic controlled matrix | `docs/tables/synthetic_matrix_summary.md` |
 
-The upload-ready manuscript is under `docs/overleaf/`; frozen claim scope and evidence audits remain
-under `docs/paper/`. The migrated template build uses seven body pages and eight pages including
-references. The paper includes only mitigation implications derived from attack-surface controls;
+The upload-ready manuscript and supplement are under `docs/overleaf/`; frozen claim scope and
+evidence audits remain under `docs/paper/`. The pre-review migration fit the page limit; the current
+review revision requires a fresh Overleaf pdfLaTeX page/layout check. The paper includes only
+mitigation implications derived from attack-surface controls;
 it does not claim a defense method, utility experiment, or defense contribution.
 
 ## Repository Layout
@@ -143,7 +146,7 @@ it does not claim a defense method, utility experiment, or defense contribution.
 | `artifacts/` | Git-tracked dataset catalog plus ignored local datasets and snapshots. |
 | `results/` | Git-tracked result catalog plus ignored local raw experiment outputs. |
 | `docs/` | Narrative docs, dataset cards, indexes, reproduction guide, and result tables. |
-| `docs/overleaf/` | Self-contained anonymous AAAI manuscript, bibliography, styles, and referenced figures. |
+| `docs/overleaf/` | Self-contained anonymous AAAI manuscript and supplement, bibliography, styles, and figures. |
 | `scripts/` | Release-boundary validation and deterministic GitHub Release bundle builder. |
 | `tests/` | Unit tests for core data/evaluation behavior. |
 

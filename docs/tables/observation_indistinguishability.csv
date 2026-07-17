@@ -1,0 +1,6 @@
+entities_per_equivalence_class,equivalence_classes,requests,requests_per_entity,bayes_entity_accuracy_ceiling,expected_pairwise_precision_upper_bound,expected_pairwise_recall_upper_bound,expected_pairwise_f1_upper_bound,carp_precision,carp_recall,carp_f1,carp_clusters,candidate_pair_events
+1,100,400,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,100,1800
+2,100,800,4,0.5,0.42857142857142855,1.0,0.6,0.42857142857142855,1.0,0.6,100,8400
+4,100,1600,4,0.25,0.2,1.0,0.33333333333333337,0.2,1.0,0.33333333333333337,100,36000
+8,100,3200,4,0.125,0.0967741935483871,1.0,0.17647058823529413,0.0,0.0,0.0,3200,49600
+16,100,6400,4,0.0625,0.047619047619047616,1.0,0.0909090909090909,0.0,0.0,0.0,6400,49600

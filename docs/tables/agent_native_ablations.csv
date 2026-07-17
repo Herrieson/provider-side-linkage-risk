@@ -1,0 +1,11 @@
+dataset,variant,pairwise_precision,pairwise_recall,pairwise_f1,accepted_edge_precision,true_edge_coverage,abstention_rate,contaminated_requests,candidates_per_request
+open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100,full,1.0,0.245,0.393574297188755,1.0,0.39,0.7025,0.0,5.0875
+open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100,replay_only,0.0,0.0,0.0,0.0,0.0,0.995,0.0,5.0875
+open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100,tool_resource_only,1.0,0.22166666666666668,0.3628922237380628,1.0,0.37,0.7125,0.0,5.0875
+open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100,typed_handle_only,1.0,0.005,0.009950248756218907,1.0,0.01,0.98,0.0,5.0875
+open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100,without_conflicts,1.0,0.245,0.393574297188755,1.0,0.39,0.7075,0.0,5.0875
+tau_bench_historical_sample200,full,1.0,0.08952672305200648,0.1643405731274259,1.0,0.3741772151898734,0.6459770114942529,0.0,23.96505747126437
+tau_bench_historical_sample200,replay_only,1.0,0.017995321216483715,0.035354428142124805,1.0,0.10126582278481013,0.8937931034482759,0.0,23.96505747126437
+tau_bench_historical_sample200,tool_resource_only,0.0,0.0,0.0,0.0,0.0,0.4340229885057471,0.0,23.96505747126437
+tau_bench_historical_sample200,typed_handle_only,1.0,0.03410113370523664,0.06595318889758985,1.0,0.1448101265822785,0.6496551724137931,0.0,23.96505747126437
+tau_bench_historical_sample200,without_conflicts,1.0,0.08952672305200648,0.1643405731274259,1.0,0.3741772151898734,0.6602298850574713,0.0,23.96505747126437

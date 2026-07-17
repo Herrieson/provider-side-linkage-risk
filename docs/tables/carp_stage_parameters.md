@@ -86,3 +86,12 @@ With per-request candidate budget `B`, local pair processing is bounded by `O(nB
 family. Cross-cache propagation operates over extracted typed anchors and connected components,
 not request all-pairs. Exact constants and memory use depend on bucket occupancy and retained
 feature caps.
+
+## Observation-Equivalence Limit
+
+The reference attack is not expected to link entities whose complete provider-visible sequences are
+exchangeable. For `k` equally likely entities with `m` requests each, closed-set entity accuracy is
+at most `1/k`. An observation-invariant request pair is a true same-entity pair with probability at
+most `(m-1)/(km-1)`, yielding expected pairwise F1 at most
+`2(m-1)/(m(k+1)-2)`. The controlled table is
+`docs/tables/observation_indistinguishability.md`.

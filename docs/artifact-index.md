@@ -26,6 +26,7 @@ Upload procedure: `docs/github-release.md`.
 | SWE-agent/minimax local reservoir sweep | `docs/tables/open_swe_sweagent_minimax_local_reservoir_sweep.md` |
 | Provider-lowcost two-stage chain | `docs/tables/open_swe_provider_lowcost.md` |
 | Main Open-SWE session baselines, CIs, and ordering | `docs/tables/open_swe_main_session_evidence.md` |
+| Pair imbalance, false-link rate, and cost-ratio sensitivity | `docs/tables/open_swe_pairwise_cost_audit.md` |
 | Open-SWE direct repository/owner exposure audit | `docs/tables/open_swe_direct_exposure_audit.md` |
 | Open-SWE candidate recall and banded bottom-k shingle-sketch diagnostic | `docs/tables/open_swe_candidate_diagnostics.md` |
 | Open-SWE strict content-removal stress test | `docs/tables/open_swe_strict_signal_removal.md` |
@@ -50,6 +51,7 @@ Upload procedure: `docs/github-release.md`.
 | L1-L5 profile risk stratification | `docs/tables/open_swe_profile_risk_levels.md` |
 | Runtime/cost scale table | `docs/tables/open_swe_runtime_cost.md` |
 | Controlled 10K--100K CARP scaling | `docs/tables/carp_synthetic_scale.md` |
+| Observation-equivalence impossibility bound and controlled validation | `docs/tables/observation_indistinguishability.md` |
 | Synthetic scale/difficulty/profile sweep | `docs/tables/synthetic_matrix_summary.md` |
 | Open-SWE user overlay linkage/longitudinal tables | `docs/tables/open_swe_user_overlay_linkage_summary.md`; `docs/tables/open_swe_user_overlay_longitudinal.md` |
 | Open-SWE user overlay feature ablation | `docs/tables/open_swe_user_overlay_user_ablation.md` |
@@ -84,19 +86,21 @@ Upload procedure: `docs/github-release.md`.
 | Purpose | Artifact |
 | --- | --- |
 | English AAAI manuscript | `docs/overleaf/api.tex` |
+| Supplementary parameter, validity, baseline, and impossibility analysis | `docs/overleaf/supplement.tex` |
 | Bibliography | `docs/overleaf/references.bib` |
 | Supplied AAAI LaTeX style and bibliography style | `docs/overleaf/aaai.sty`; `docs/overleaf/aaai.bst` |
-| Measurement framework and CARP reference-pipeline figure | `docs/overleaf/figures/carp_pipeline.pdf` |
-| Supplementary evidence-layer figure | `docs/paper/figures/evidence_layers.pdf` |
-| T3 longitudinal figure | `docs/overleaf/figures/t3_longitudinal.pdf` |
+| Measurement framework with CARP and ASL linkage paths | `docs/overleaf/figures/carp_pipeline.pdf` |
+| Supplementary evidence-layer figure | `docs/overleaf/figures/evidence_layers.pdf` |
+| Hierarchical longitudinal-linkage figure | `docs/overleaf/figures/t3_longitudinal.pdf` |
+| Four-panel channels, concurrency, Agent-state, and impossibility figure | `docs/overleaf/figures/results_overview.pdf` |
 | Frozen submission scope | `docs/paper/submission-scope.md` |
 | Claim-to-evidence audit | `docs/paper/claim-audit.md` |
 | Artifact release checklist | `docs/paper/artifact-release-checklist.md` |
 | Submission readiness report | `docs/paper/submission-readiness-report.md` |
 
-The migrated submission build uses seven body pages and eight pages including references. Defense
-is intentionally limited to mitigation implications; it is not a research question, contribution,
-or main-table result.
+The pre-review migration fit seven body pages; the current review revision adds a supplement and
+requires a fresh Overleaf pdfLaTeX page/layout check. Defense remains limited to mitigation
+implications; it is not a research question, contribution, or main-table result.
 
 ## Dataset Cards
 

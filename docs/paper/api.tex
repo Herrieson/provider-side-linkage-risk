@@ -23,6 +23,8 @@
 \newcommand{\carp}{\textsc{CARP}\xspace}
 \newcommand{\carpcontent}{\textsc{CARP-Content}\xspace}
 \newcommand{\method}{\textsc{CARP}\xspace}
+\newcommand{\artifactfootnote}{\footnote{Code, results, and derived datasets are available at
+\url{https://anonymous.4open.science/r/provider-side-linkage-risk-3FBC}.}}
 
 \pdfinfo{
 /TemplateVersion (2026.1)
@@ -55,8 +57,11 @@ unseen OpenHands projects at F1 0.682. On non-code traces, time-independent cont
 0.843 after intents are rephrased. In the software traces, combining handle abstraction with non-cumulative
 requests nearly eliminates session linkage, showing that the channels need separate controls.
 Identifier stripping is therefore not content de-identification: agent privacy boundaries must cover
-persistent task objects, replayed context, and provider log retention.
+persistent task objects, replayed context, and provider log retention.\artifactfootnote
 \end{abstract}
+
+% Camera-ready: replace the anonymous URL above with the canonical repository:
+% \url{https://github.com/Herrieson/provider-side-linkage-risk}.
 
 \section{Introduction}
 
@@ -353,7 +358,7 @@ repository fields and slugs, and internal domains before feature extraction. Thi
 anchor occurrence retention, later-traffic alias rotation, and shared-anchor collision.
 
 \paragraph{Artifact availability.}
-The anonymized artifact includes code, locked dependencies, configs, attack-view generators,
+The anonymous artifact includes code, locked dependencies, configs, attack-view generators,
 random seeds, derived tables, and figure scripts; redistribution of raw benchmark text remains
 subject to upstream licenses.
 

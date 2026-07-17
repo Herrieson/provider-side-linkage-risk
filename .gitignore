@@ -3,8 +3,13 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.pyright/
+.hypothesis/
+.ipynb_checkpoints/
 *.egg-info/
 .coverage
+.coverage.*
 htmlcov/
 build/
 dist/
@@ -24,23 +29,64 @@ results/*
 !.env.example
 *.pem
 *.key
+*.p12
+*.pfx
+*.jks
+*.keystore
 .DS_Store
+Thumbs.db
 .idea/
 .vscode/
+.agents/
+.codex/
+*.swp
+*.swo
+*~
 
+# LaTeX compiler sidecars may also be produced outside the manuscript folders.
+# Do not ignore *.pdf globally because the paper figures are versioned assets.
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# LaTeX build products. Keep source-controlled PDF figures; ignore only
+# compiler sidecars and manuscript PDFs/archives.
 docs/paper/*.aux
 docs/paper/*.bbl
 docs/paper/*.blg
+docs/paper/*.fdb_latexmk
+docs/paper/*.fls
 docs/paper/*.log
+docs/paper/*.nav
 docs/paper/*.out
 docs/paper/*.pdf
+docs/paper/*.snm
+docs/paper/*.synctex.gz
+docs/paper/*.toc
+docs/paper/*.vrb
 
 # Overleaf build products. The source, bibliography, template files, and
 # referenced figures under docs/overleaf/ are versioned for direct upload.
 docs/overleaf/*.aux
 docs/overleaf/*.bbl
 docs/overleaf/*.blg
+docs/overleaf/*.fdb_latexmk
+docs/overleaf/*.fls
 docs/overleaf/*.log
+docs/overleaf/*.nav
 docs/overleaf/*.out
 docs/overleaf/*.pdf
+docs/overleaf/*.snm
+docs/overleaf/*.synctex.gz
+docs/overleaf/*.toc
+docs/overleaf/*.vrb
 docs/overleaf/*.zip

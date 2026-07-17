@@ -500,10 +500,17 @@ uv run python -m agent_privacy.experiments.bootstrap_paper_extensions \
 
 uv run python -m agent_privacy.experiments.generate_paper_figures \
   --output-dir docs/paper/figures
+
+uv run python -m agent_privacy.experiments.summarize_indistinguishability \
+  --output-dir docs/tables
+
+uv run python -m agent_privacy.experiments.summarize_pairwise_costs \
+  --output-dir docs/tables
 ```
 
 Compile the anonymous upload project with the supplied AAAI style files stored in
-`docs/overleaf/`. In Overleaf, set `api.tex` as the main document and select pdfLaTeX. A local
+`docs/overleaf/`. In Overleaf, set `api.tex` as the main document and select pdfLaTeX; compile
+`supplement.tex` separately for the detailed parameter and impossibility analysis. A local
 multi-pass smoke build can use Tectonic:
 
 ```bash
@@ -511,10 +518,61 @@ cd docs/overleaf
 tectonic -X compile api.tex --outdir /tmp/paper-build --keep-logs
 ```
 
-The validated migration build uses seven body pages and eight pages including references, with no
-BibTeX errors, unresolved citations, or overfull boxes. The generated PDF remains a local build
-product and is ignored. Because Tectonic uses XeTeX-compatible fallbacks for the supplied
-pdfLaTeX-oriented style, run the final font-embedding check on the PDF exported by Overleaf.
+The pre-review migration build used seven body pages and eight pages including references. Because
+the current review revision changes the main text and adds `supplement.tex`, rerun the final
+pdfLaTeX page-count, citation, cross-reference, overfull-box, and font-embedding checks in Overleaf.
+Generated PDFs remain ignored build products.
+
+## Agent-Native Linkage Upgrade Feasibility
+
+The experimental Agent-native implementation is separate from the frozen CARP attack. It uses
+bounded replay/resource/typed-handle state, explicit conflicts, a 90-minute active index, and
+selective abstention. Run the cross-dataset feasibility checks with:
+
+```bash
+.venv/bin/python -m agent_privacy.experiments.run_agent_native \
+  --dataset-dir examples/tool_agent_smoke/dataset \
+  --output results/agent_native/smoke.json
+
+.venv/bin/python -m agent_privacy.experiments.run_agent_native \
+  --dataset-dir artifacts/datasets/open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100 \
+  --output results/agent_native/open_swe_sample100.json
+
+.venv/bin/python -m agent_privacy.experiments.run_agent_native \
+  --dataset-dir artifacts/datasets/tau_bench_historical_sample200 \
+  --output results/agent_native/tau_historical_sample200.json
+
+.venv/bin/python -m agent_privacy.experiments.run_agent_native \
+  --scale-requests 100000 \
+  --output results/agent_native/scale_100k.json
+```
+
+Audit a trace-preserving span intervention separately from attack evaluation:
+
+```bash
+.venv/bin/python -m agent_privacy.experiments.audit_trace_fidelity \
+  --dataset-dir examples/tool_agent_smoke/dataset \
+  --output-dir results/agent_native/fidelity_smoke
+```
+
+The current measured results and their claim boundaries are summarized in
+`docs/tables/agent_native_feasibility.md`. Reproduce the completed evidence-family ablations with:
+
+```bash
+.venv/bin/python -m agent_privacy.experiments.agent_native_ablations \
+  --dataset-dir artifacts/datasets/open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100 \
+  --dataset-dir artifacts/datasets/tau_bench_historical_sample200 \
+  --output-base docs/tables/agent_native_ablations
+```
+
+Run the generic non-Agent text-linkage control with:
+
+```bash
+.venv/bin/python -m agent_privacy.experiments.generic_text_baseline \
+  --dataset-dir artifacts/datasets/open_swe_traces_raw_1000_turn_delta_3_6_9_12_sample100 \
+  --dataset-dir artifacts/datasets/tau_bench_historical_sample200 \
+  --output-base docs/tables/generic_text_linkage_baseline
+```
 
 ## Optional Follow-Up Runs
 

@@ -59,6 +59,34 @@ def clustering_metrics(pred: dict[str, str], truth: dict[str, str]) -> dict[str,
     }
 
 
+def pairwise_confusion_counts(pred: dict[str, str], truth: dict[str, str]) -> dict[str, int]:
+    """Return exact pair-level TP/FP/FN/TN counts without materializing request pairs."""
+
+    request_ids = sorted(set(pred) & set(truth))
+    pred_counts = Counter(pred[rid] for rid in request_ids)
+    truth_counts = Counter(truth[rid] for rid in request_ids)
+    joint_counts = Counter((pred[rid], truth[rid]) for rid in request_ids)
+    predicted_positive = sum(_choose2(count) for count in pred_counts.values())
+    actual_positive = sum(_choose2(count) for count in truth_counts.values())
+    true_positive = sum(_choose2(count) for count in joint_counts.values())
+    false_positive = predicted_positive - true_positive
+    false_negative = actual_positive - true_positive
+    total_pairs = _choose2(len(request_ids))
+    actual_negative = total_pairs - actual_positive
+    true_negative = actual_negative - false_positive
+    return {
+        "items": len(request_ids),
+        "total_pairs": total_pairs,
+        "actual_positive_pairs": actual_positive,
+        "actual_negative_pairs": actual_negative,
+        "predicted_positive_pairs": predicted_positive,
+        "true_positive_pairs": true_positive,
+        "false_positive_pairs": false_positive,
+        "false_negative_pairs": false_negative,
+        "true_negative_pairs": true_negative,
+    }
+
+
 def cross_workflow_clustering_metrics(
     pred: dict[str, str],
     truth: dict[str, str],
