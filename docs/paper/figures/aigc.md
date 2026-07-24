@@ -9,7 +9,7 @@ Inkscape、Keynote 或绘图代码手工重建为矢量图。
 | 编号 | 文件 | 用途 | 版式 |
 | --- | --- | --- | --- |
 | Figure 1 | `carp_pipeline.pdf` | 正文：Measurement Contract + CARP/ASL 双路径 | 双栏，约 16:9 |
-| Figure 2 | `results_overview.pdf` | 正文：通道、并发、Agent-state 增益与不可区分性 | 双栏，四联图 |
+| Figure 2 | `results_overview.pdf` | 正文：通道、并发、Agent-state 增益与不可区分性 | 双栏，1×4 紧凑四联图 |
 | Figure 3 | `t3_longitudinal.pdf` | 正文：层次化纵向传播和 watchlist 结果 | 单栏，约 1.54:1 |
 | Supplementary Figure | `evidence_layers.pdf` | 补充材料：数据证据层级与研究问题 | 双栏，约 2.33:1 |
 

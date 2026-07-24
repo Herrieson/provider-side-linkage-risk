@@ -980,23 +980,23 @@ def _t3_longitudinal() -> plt.Figure:
 
 
 def _results_overview() -> plt.Figure:
-    fig, axes = plt.subplots(2, 2, figsize=(7.2, 4.8))
-    ax_surface, ax_time, ax_scale, ax_bound = axes.flat
+    fig, axes = plt.subplots(1, 4, figsize=(7.2, 2.25))
+    ax_surface, ax_time, ax_scale, ax_bound = axes
 
-    surface_labels = ["Raw\ncumulative", "No direct\nhandles", "No replay", "Neither"]
+    surface_labels = ["Raw", "$-$handles", "$-$replay", "$-$both"]
     surface_f1 = [0.967, 0.183, 0.117, 0.016]
     surface_colors = [COLORS["blue"], COLORS["gold"], COLORS["teal"], COLORS["red"]]
     bars = ax_surface.bar(surface_labels, surface_f1, color=surface_colors, width=0.68)
     ax_surface.set_ylim(0, 1.05)
-    ax_surface.set_ylabel("Session F1")
-    ax_surface.set_title("A  Paired removal isolates two channels", loc="left", weight="bold")
+    ax_surface.set_ylabel("F1")
+    ax_surface.set_title("A  Distinct channels", loc="left", weight="bold", fontsize=8)
     for bar, value in zip(bars, surface_f1, strict=True):
         ax_surface.text(
             bar.get_x() + bar.get_width() / 2,
             value + 0.025,
             f"{value:.3f}",
             ha="center",
-            fontsize=7,
+            fontsize=5.8,
         )
 
     concurrency = [2, 10, 41, 146]
@@ -1013,10 +1013,9 @@ def _results_overview() -> plt.Figure:
     ax_time.set_xscale("log")
     ax_time.set_xticks(concurrency, [str(value) for value in concurrency])
     ax_time.set_ylim(0, 1.05)
-    ax_time.set_xlabel("Peak concurrent workflows")
-    ax_time.set_ylabel("Session F1")
-    ax_time.set_title("B  Timing fails under concurrency", loc="left", weight="bold")
-    ax_time.legend(frameon=False, fontsize=7, loc="center right")
+    ax_time.set_xlabel("Concurrent workflows")
+    ax_time.set_title("B  Timing fails with overlap", loc="left", weight="bold", fontsize=8)
+    ax_time.legend(frameon=False, fontsize=5.8, loc="center right", handlelength=1.2)
 
     domains = ["Open-SWE\nincremental", "tau-bench\nhistorical"]
     generic_text = np.array([0.204, 0.019])
@@ -1030,16 +1029,36 @@ def _results_overview() -> plt.Figure:
         width,
         label="Generic text",
         color=COLORS["muted"],
+        edgecolor=COLORS["ink"],
+        linewidth=0.35,
+        hatch="//",
     )
-    ax_scale.bar(x, carp, width, label="CARP", color=COLORS["blue"])
-    ax_scale.bar(x + width, asl, width, label="ASL", color=COLORS["teal"])
+    ax_scale.bar(
+        x,
+        carp,
+        width,
+        label="CARP",
+        color=COLORS["blue"],
+        edgecolor=COLORS["ink"],
+        linewidth=0.35,
+        hatch="\\\\",
+    )
+    ax_scale.bar(
+        x + width,
+        asl,
+        width,
+        label="ASL",
+        color=COLORS["teal"],
+        edgecolor=COLORS["ink"],
+        linewidth=0.35,
+        hatch="..",
+    )
     ax_scale.set_xticks(x, domains)
     ax_scale.set_ylim(0, 0.45)
-    ax_scale.set_ylabel("Session F1")
-    ax_scale.set_title("C  Agent state improves linkage", loc="left", weight="bold")
+    ax_scale.set_title("C  Agent state raises F1", loc="left", weight="bold", fontsize=8)
     ax_scale.legend(
         frameon=False,
-        fontsize=6.5,
+        fontsize=5.5,
         ncol=1,
         loc="upper right",
         borderaxespad=0.2,
@@ -1051,7 +1070,7 @@ def _results_overview() -> plt.Figure:
         (x + width, asl),
     ):
         for position, value in zip(positions, values, strict=True):
-            ax_scale.text(position, value + 0.012, f"{value:.2f}", ha="center", fontsize=6.5)
+            ax_scale.text(position, value + 0.012, f"{value:.2f}", ha="center", fontsize=5.5)
 
     multiplicity = np.array([1, 2, 4, 8, 16])
     f1_bound = np.array([1.000, 0.600, 0.333, 0.176, 0.091])
@@ -1073,17 +1092,16 @@ def _results_overview() -> plt.Figure:
     ax_bound.set_xscale("log", base=2)
     ax_bound.set_xticks(multiplicity, [str(value) for value in multiplicity])
     ax_bound.set_ylim(0, 1.05)
-    ax_bound.set_xlabel("Exchangeable entities/class")
-    ax_bound.set_ylabel("Pairwise F1")
-    ax_bound.set_title("D  Indistinguishability bounds linkage", loc="left", weight="bold")
-    ax_bound.legend(frameon=False, fontsize=7)
+    ax_bound.set_xlabel("Entities / equiv. class")
+    ax_bound.set_title("D  Ambiguity bounds F1", loc="left", weight="bold", fontsize=8)
+    ax_bound.legend(frameon=False, fontsize=5.8, handlelength=1.2)
 
     for ax in (ax_surface, ax_time, ax_scale, ax_bound):
         ax.grid(axis="y", color="#D9DEE3", linewidth=0.55)
         ax.set_axisbelow(True)
         ax.spines[["top", "right"]].set_visible(False)
-    fig.suptitle("Key Findings Across Channels, Agent State, and Limits", weight="bold", y=1.01)
-    fig.subplots_adjust(left=0.09, right=0.91, bottom=0.10, top=0.91, wspace=0.48, hspace=0.48)
+        ax.tick_params(axis="both", labelsize=6)
+    fig.subplots_adjust(left=0.065, right=0.995, bottom=0.22, top=0.88, wspace=0.38)
     return fig
 
 
