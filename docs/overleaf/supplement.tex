@@ -1,23 +1,26 @@
-\documentclass[letterpaper]{article}
-\usepackage{aaai}
-\usepackage{times}
-\usepackage{helvet}
-\usepackage{courier}
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2027} % DO NOT CHANGE THIS
 \usepackage[hyphens]{url}
-\usepackage{booktabs}
 \usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{xspace}
-\usepackage[hidelinks]{hyperref}
 \frenchspacing
-\setlength{\pdfpagewidth}{8.5in}
-\setlength{\pdfpageheight}{11in}
+\setcounter{secnumdepth}{2}
 \newcommand{\carp}{\textsc{CARP}\xspace}
 \newcommand{\asl}{\textsc{ASL}\xspace}
 
-\title{Supplementary Material:\\Unidentified, Yet Linkable?}
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+\title{Supplementary Material:\\Unidentified, yet Linkable?}
 \author{Anonymous Submission}
-\nocopyright
+\affiliations{}
 
 \begin{document}
 \maketitle
@@ -148,7 +151,7 @@ fixtures rather than claimed as an empirical gain here. The generic control uses
 hashing vectorizer and cosine nearest neighbor in the same active window. It requires 20.0/61.7
 comparisons per request on Open-SWE/tau, versus 5.1/24.0 for \asl's typed indexes.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \small
 \begin{tabular}{@{}rrrrrr@{}}
@@ -203,7 +206,7 @@ This is a conditional impossibility statement: side information that breaks exch
 breaks the bound. Identical prompts and schemas are insufficient when task text, object handles,
 timing, or context replay remain distinct.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \small
 \begin{tabular}{@{}rrrrr@{}}

@@ -1,37 +1,28 @@
-\documentclass[letterpaper]{article}
-\usepackage{aaai}
-\usepackage{times}
-\usepackage{helvet}
-\usepackage{courier}
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2027} % DO NOT CHANGE THIS
 \usepackage[hyphens]{url}
 \usepackage{graphicx}
 \urlstyle{rm}
 \def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
 \usepackage{booktabs}
-\usepackage{multirow}
 \usepackage{amsmath}
 \usepackage{xspace}
-\usepackage[hidelinks]{hyperref}
 \frenchspacing
-\setlength{\pdfpagewidth}{8.5in}
-\setlength{\pdfpageheight}{11in}
 \setcounter{secnumdepth}{2}
 
 \newcommand{\carp}{\textsc{CARP}\xspace}
 \newcommand{\asl}{\textsc{ASL}\xspace}
-\newcommand{\artifactfootnote}{\footnote{Code, results, and derived datasets are available at
-\url{https://anonymous.4open.science/r/provider-side-linkage-risk-3FBC}.}}
 
-\ifdefined\pdfinfo
-  \pdfinfo{
-  /Title (Unidentified, Yet Linkable? Measuring Provider-Side Linkage Risk in LLM Agent Traffic)
-  }
-\fi
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
 
-\title{Unidentified, Yet Linkable?\\
+\title{Unidentified, yet Linkable?\\
 Measuring Provider-Side Linkage Risk in LLM Agent Traffic}
 \author{Anonymous Submission}
-\nocopyright
+\affiliations{}
 
 \begin{document}
 \maketitle
@@ -58,11 +49,14 @@ bounded active working set through 500K requests. Conversely, combining handle a
 non-cumulative requests nearly eliminates software-session linkage, showing that the channels need
 separate controls.
 Identifier stripping is therefore not content de-identification: agent privacy boundaries must cover
-persistent task objects, replayed context, and provider log retention.\artifactfootnote
+persistent task objects, replayed context, and provider log retention.
 \end{abstract}
 
-% Camera-ready: replace the anonymous URL above with the canonical repository:
-% \url{https://github.com/Herrieson/provider-side-linkage-risk}.
+\begin{links}
+    \link{Code, Results, and Derived Datasets}{https://anonymous.4open.science/r/provider-side-linkage-risk-3FBC}
+\end{links}
+
+% Camera-ready: replace the anonymous URL above with the canonical repository URL.
 
 \section{Introduction}
 
@@ -185,7 +179,7 @@ intelligence.
 The broker terminates the client connection and creates a new upstream request, so the provider sees
 the broker's upstream connection together with the forwarded inference content.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \small
 \begin{tabular}{@{}p{0.68\columnwidth}c@{}}
@@ -435,18 +429,19 @@ establishes direct sanitization exposure before any cross-request inference.
 \toprule
 Observation and method & Workflow & Project & Owner \\
 \midrule
-Exact cumulative prefix & 1.000 & --- & --- \\
+Exact cumulative prefix & 1.000 & N/A & N/A \\
 Hybrid & .983 & .994 & .981 \\
 \carp & .967 & .994 & .981 \\
-Namespace anchors & --- & .994 & .981 \\
-\carp, incremental & .117 & --- & --- \\
+Namespace anchors & N/A & .994 & .981 \\
+\carp, incremental & .117 & N/A & N/A \\
 Sanitized, cumulative & .183 & .000 & .000 \\
 Sanitized, incremental & .016 & .000 & .000 \\
 \bottomrule
 \end{tabular}
 \caption{Attack-surface matrix on held-out Open-SWE traffic. Exact cumulative-prefix matching
 diagnoses replay exposure; project/owner columns exclude within-workflow pairs. Sanitized rows rewrite
-paths, repository strings, and internal domains.}
+paths, repository strings, and internal domains. N/A indicates that the control does not apply at
+the corresponding linkage level.}
 \label{tab:openswe}
 \end{table}
 
@@ -590,6 +585,5 @@ architectures must distinguish metadata stripping from content minimization and 
 context and stable task objects in the identity boundary\label{paper:body-end}.
 
 \bibliography{references}
-\bibliographystyle{aaai}
 
 \end{document}
