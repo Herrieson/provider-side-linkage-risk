@@ -9,7 +9,10 @@ self-contained for the main paper and supplementary material:
   observation-equivalence analysis;
 - `references.bib`: the 32 cited references;
 - `aaai.sty` and `aaai.bst`: supplied template styles;
-- `figures/carp_pipeline.pdf`: measurement contract with the complementary CARP and ASL paths.
+- `figures/carp_pipeline.pdf`: visual overview of identifier stripping, provider-side linkage, and
+  longitudinal reconstruction outcomes.
+- `figures/provider_linkage_overview_editable.pptx`: editable PowerPoint source for the main figure;
+  regenerate it with `scripts/generate_editable_main_figure.py`.
 - `figures/results_overview.pdf`: four-panel summary of linkage channels, concurrency, Agent-state
   gains, and the indistinguishability limit.
 - `figures/t3_longitudinal.pdf`: hierarchical propagation and later-traffic watchlist results.

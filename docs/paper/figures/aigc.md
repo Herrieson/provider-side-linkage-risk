@@ -8,7 +8,7 @@ Inkscape、Keynote 或绘图代码手工重建为矢量图。
 
 | 编号 | 文件 | 用途 | 版式 |
 | --- | --- | --- | --- |
-| Figure 1 | `carp_pipeline.pdf` | 正文：Measurement Contract + CARP/ASL 双路径 | 双栏，约 2.2:1 |
+| Figure 1 | `carp_pipeline.pdf` | 正文：Measurement Contract + CARP/ASL 双路径 | 双栏，约 16:9 |
 | Figure 2 | `results_overview.pdf` | 正文：通道、并发、Agent-state 增益与不可区分性 | 双栏，四联图 |
 | Figure 3 | `t3_longitudinal.pdf` | 正文：层次化纵向传播和 watchlist 结果 | 单栏，约 1.54:1 |
 | Supplementary Figure | `evidence_layers.pdf` | 补充材料：数据证据层级与研究问题 | 双栏，约 2.33:1 |
@@ -77,6 +77,12 @@ distorted axes, invented numbers, raster blur.
 ---
 
 ## Figure 1: Controlled Measurement Framework and Agent-Native Linkage
+
+Figure 1 的最终、完整生成提示词已经独立整理到
+`provider_linkage_overview_aigc_prompt.md`。当前版本采用三层技术叙事：provider view 与 paired
+measurement、CARP/ASL 的互补受界路径、以及三类 linkage channel 到纵向隐私后果的层次。
+它保留方法辨识度，但不展开阈值和配置细节。下面保留的是早期构图说明，使用时应以前述
+独立文件为准。
 
 ### 论文角色
 

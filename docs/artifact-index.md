@@ -89,7 +89,8 @@ Upload procedure: `docs/github-release.md`.
 | Supplementary parameter, validity, baseline, and impossibility analysis | `docs/overleaf/supplement.tex` |
 | Bibliography | `docs/overleaf/references.bib` |
 | Supplied AAAI LaTeX style and bibliography style | `docs/overleaf/aaai.sty`; `docs/overleaf/aaai.bst` |
-| Measurement framework with CARP and ASL linkage paths | `docs/overleaf/figures/carp_pipeline.pdf` |
+| Visual overview of provider-side linkage and longitudinal reconstruction | `docs/overleaf/figures/carp_pipeline.pdf` |
+| Editable PowerPoint source for the main framework figure | `docs/overleaf/figures/provider_linkage_overview_editable.pptx` |
 | Supplementary evidence-layer figure | `docs/overleaf/figures/evidence_layers.pdf` |
 | Hierarchical longitudinal-linkage figure | `docs/overleaf/figures/t3_longitudinal.pdf` |
 | Four-panel channels, concurrency, Agent-state, and impossibility figure | `docs/overleaf/figures/results_overview.pdf` |

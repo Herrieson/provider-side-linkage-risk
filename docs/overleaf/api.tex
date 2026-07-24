@@ -260,10 +260,12 @@ and how an attacker can exploit that channel at scale. Paired transformations an
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.98\textwidth]{figures/carp_pipeline.pdf}
-    \caption{Measurement and linkage framework. The upper lane keeps provider-visible evidence
-    separate from sealed truth and uses paired controls to attribute risk. The lower lane contrasts
-    \carp's sparse discovery and propagation with \asl's bounded Agent state, multi-view evidence,
-    conflict-aware selection, and hierarchical linkage.}
+    \caption{Provider-side linkage measurement and consequences. Top: a broker removes protocol
+    identifiers but forwards plaintext evidence; paired handle, replay, timing, and collision
+    interventions attribute score changes against evaluator-only sealed truth. Middle: \carp uses
+    sparse discovery and propagation, while \asl uses bounded Agent state, multi-view conflicts, and
+    selective hierarchy. Bottom: direct exposure, workflow continuity, and longitudinal propagation
+    support entity linkage, partial profiles, and later assignment under provider retention.}
     \label{fig:carp}
 \end{figure*}
 

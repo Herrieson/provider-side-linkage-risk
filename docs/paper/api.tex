@@ -214,10 +214,12 @@ longer-lived entity scores, evaluate watchlists only on later traffic, and bound
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.98\textwidth]{figures/carp_pipeline.pdf}
-    \caption{Measurement framework and reference attack. The upper lane enforces the threat
-    contract: paired controls alter only the provider-visible attack view, attacks cannot read the
-    sealed truth, and labels are unsealed only for scoring. The lower lane instantiates the attack
-    with \carp's five bounded sparse-linkage steps.}
+    \caption{Provider-side linkage measurement and consequences. Top: a broker removes protocol
+    identifiers but forwards plaintext evidence; paired handle, replay, timing, and collision
+    interventions attribute score changes against evaluator-only sealed truth. Middle: complementary
+    bounded linkage paths recover workflow and entity components. Bottom: direct exposure, workflow
+    continuity, and longitudinal propagation support entity linkage, partial profiles, and later
+    assignment under provider retention.}
     \label{fig:carp}
 \end{figure*}
 

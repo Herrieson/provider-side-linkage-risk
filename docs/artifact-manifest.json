@@ -85,6 +85,7 @@
     "aaai_style": "docs/overleaf/aaai.sty",
     "aaai_bibliography_style": "docs/overleaf/aaai.bst",
     "carp_pipeline_figure": "docs/overleaf/figures/carp_pipeline.pdf",
+    "carp_pipeline_editable_source": "docs/overleaf/figures/provider_linkage_overview_editable.pptx",
     "supplementary_evidence_layers_figure": "docs/overleaf/figures/evidence_layers.pdf",
     "t3_longitudinal_figure": "docs/overleaf/figures/t3_longitudinal.pdf",
     "results_overview_figure": "docs/overleaf/figures/results_overview.pdf",
